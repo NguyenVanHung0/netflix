@@ -7,7 +7,7 @@ function Login() {
         <div className="login">
             <div className='cover-layer'></div>
             <div className="login__header">
-                <a href='/'>
+                <a href='/netflix/'>
                     <svg viewBox="0 0 111 30" className='home__logo-img' >
                         <g>
                             <path

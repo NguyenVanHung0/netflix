@@ -1,6 +1,8 @@
 import './Footer.css'
 import { FaGlobe, FaAngleDown } from 'react-icons/fa'
 import { useEffect, useRef, useState } from 'react'
+import { connect } from 'react-redux'
+
 
 function useOutsideAlerter(ref, setAppear) {
     useEffect(() => {
@@ -25,9 +27,10 @@ function useOutsideAlerter(ref, setAppear) {
     }, [ref]);
 }
 
-function Footer() {
+function Footer(props) {
     const [appear, setAppear] = useState(false)
     const homeLanguage = useRef()
+    const isVietNam = props.language == 'vietnam'
 
     useOutsideAlerter(homeLanguage, setAppear);
 
@@ -42,70 +45,80 @@ function Footer() {
         }
     }
 
+    function handleChangeEnglish() {
+        let language = 'english'
+        props.changeLanguage(language);
+    }
+
+    function handleChangeVietNam() {
+        let language = 'vietnam'
+        props.changeLanguage(language);
+    }
+
     return (
         <div className='footer'>
             <div className='footer__header'>
-                <a href=''>Bạn có câu hỏi? Liên hệ với chúng tôi.</a>
+                <a href=''>{isVietNam ? 'Bạn có câu hỏi? Liên hệ với chúng tôi.' : 'Questions? Contact us.'}</a>
             </div>
             <div className='footer__content'>
                 <div className='footer__item'>
                     <ul className='footer__list'>
                         <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Câu hỏi thường gặp</a>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Câu hỏi thường gặp' : 'FAQ'}</a>
                         </li>
                         <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Quan hệ với nhà đầu tư</a>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Quan hệ với nhà đầu tư' : 'Investor Relations'}</a>
                         </li>
                         <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Quyền riêng tư</a>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Quyền riêng tư' : 'Privacy'}</a>
                         </li>
                         <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Tốc độ</a>
-                        </li>
-                    </ul>
-                </div>
-                <div className='footer__item'>
-                    <ul className='footer__list'>
-                        <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Trung tâm trợ giúp</a>
-                        </li>
-                        <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Việc làm</a>
-                        </li>
-                        <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Tùy chọn cookie</a>
-                        </li>
-                        <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Thông báo pháp lí</a>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Tốc độ' : 'Speed Test'}</a>
                         </li>
                     </ul>
                 </div>
                 <div className='footer__item'>
                     <ul className='footer__list'>
                         <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Tài khoản</a>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Trung tâm trợ giúp' : 'Help Center'}</a>
                         </li>
                         <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Các cách xem</a>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Việc làm' : 'Jobs'}</a>
                         </li>
                         <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Thông tin doanh nghiệp</a>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Tùy chọn cookie' : 'Cookie Preferences'}</a>
                         </li>
                         <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Chỉ có trên Netflix</a>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Thông báo pháp lí' : 'Legal Notices'}</a>
                         </li>
                     </ul>
                 </div>
                 <div className='footer__item'>
                     <ul className='footer__list'>
                         <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Trung tâm đa phương tiện</a>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Tài khoản' : 'Account'}</a>
                         </li>
                         <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Điều khoản sử dụng</a>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Các cách xem' : 'Ways to Watch'}</a>
                         </li>
                         <li className='footer__list-item'>
-                            <a href='' className='footer__list-item-link'>Liên hệ với chúng tôi</a>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Thông tin doanh nghiệp' : 'Corporate Information'}</a>
+                        </li>
+                        <li className='footer__list-item'>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Chỉ có trên Netflix' : 'Only on Netflix'}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div className='footer__item'>
+                    <ul className='footer__list'>
+                        <li className='footer__list-item'>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Trung tâm đa phương tiện' : 'Media Center'}</a>
+                        </li>
+                        <li className='footer__list-item'>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Điều khoản sử dụng' : 'Media Center'}</a>
+                        </li>
+                        <li className='footer__list-item'>
+                            <a href='' className='footer__list-item-link'>{isVietNam ? 'Liên hệ với chúng tôi' : 'Contact Us'}</a>
                         </li>
                     </ul>
                 </div>
@@ -118,15 +131,26 @@ function Footer() {
                         <FaAngleDown />
                     </button>
                     {appear && <ul className='language-list'>
-                        <li className='language__item active--language'>Tiếng Việt</li>
-                        <li className='language__item'>English</li>
+                        <li className='language__item' onClick={handleChangeVietNam}>Tiếng Việt</li>
+                        <li className='language__item' onClick={handleChangeEnglish}>English</li>
                     </ul>
                     }
-                    <p className='footer__name-web'>Netflix Việt Nam</p>
+                    <p className='footer__name-web'>{isVietNam ? 'Netflix Việt Nam' : 'Netflix Vietnam'}</p>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Footer
+const mapStateToProps = (state) => {
+    return { language: state.language }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language })
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer)

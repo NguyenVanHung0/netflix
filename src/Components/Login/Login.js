@@ -1,13 +1,54 @@
 import { FaGlobe, FaAngleDown, FaFacebookSquare } from 'react-icons/fa'
 import './Login.css'
 import logoface from '../../assets/img/logoface.png'
+import { Link } from 'react-router-dom'
+import { useState, useRef, useEffect } from 'react'
+
+
+function useOutsideAlerter(ref, setAppear) {
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (ref.current && !ref.current.contains(event.target)) {
+                setAppear(false)
+            }
+        }
+
+        function handleScroll() {
+            setAppear(false)
+        }
+
+        // Bind the event listener
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("scroll", handleScroll)
+        return () => {
+            // Unbind the event listener on clean up
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("scroll", handleScroll)
+        };
+    }, [ref]);
+}
 
 function Login() {
+    const [appear, setAppear] = useState(false)
+    const homeLanguage = useRef()
+
+    useOutsideAlerter(homeLanguage, setAppear);
+    function handleAppear() {
+        setAppear(!appear)
+        if (homeLanguage.current && appear === false) {
+            console.log('hi')
+            homeLanguage.current.style.borderRadius = '4px'
+        }
+        else {
+            homeLanguage.current.style.borderRadius = '2px'
+        }
+    }
+
     return (
         <div className="login">
             <div className='cover-layer'></div>
             <div className="login__header">
-                <a href='/netflix/'>
+                <Link to='/netflix/'>
                     <svg viewBox="0 0 111 30" className='home__logo-img' >
                         <g>
                             <path
@@ -17,7 +58,7 @@ function Login() {
                             ></path>
                         </g>
                     </svg>
-                </a>
+                </Link>
             </div>
             <div className="login__body">
                 <form className="login__form">
@@ -97,15 +138,16 @@ function Login() {
                 </div>
                 <div className='footer__language'>
                     <div className='footer__language-selection'>
-                        <button className='footer__language-btn'>
+                        <button className='footer__language-btn' ref={homeLanguage} onClick={handleAppear} >
                             <FaGlobe />
                             <p className='footer__language-btn-text'>Tiếng Việt</p>
                             <FaAngleDown />
                         </button>
-                        <ul className='language-list'>
+                        {appear && <ul className='language-list'>
                             <li className='language__item active--language'>Tiếng Việt</li>
                             <li className='language__item'>English</li>
                         </ul>
+                        }
                         <p className='footer__name-web'>Netflix Việt Nam</p>
                     </div>
                 </div>

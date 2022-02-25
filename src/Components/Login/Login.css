@@ -127,9 +127,10 @@
 .login__footer {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
-  padding: 70px 225px 0px 225px;
+  padding: 30px 225px 0px 225px;
   z-index: 1;
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 335px;
 }

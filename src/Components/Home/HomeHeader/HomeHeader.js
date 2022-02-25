@@ -2,6 +2,7 @@ import './HomeHeader.css'
 import { FaGlobe, FaAngleDown, FaAngleRight } from 'react-icons/fa'
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 function useOutsideAlerter(ref, setAppear) {
     useEffect(() => {
@@ -26,15 +27,15 @@ function useOutsideAlerter(ref, setAppear) {
     }, [ref]);
 }
 
-function Home() {
+function Home(props) {
     const [appear, setAppear] = useState(false)
     const homeLanguage = useRef()
+    let isVietNam = props.language == 'vietnam'
 
     useOutsideAlerter(homeLanguage, setAppear);
     function handleAppear() {
         setAppear(!appear)
         if (homeLanguage.current && appear === false) {
-            console.log('hi')
             homeLanguage.current.style.borderRadius = '4px'
         }
         else {
@@ -42,11 +43,15 @@ function Home() {
         }
     }
 
-    // function handleClickOutSide() {
-    //     console.log('click on window')
-    //     setAppear(false)
-    //     homeLanguage.current.prevenDefault()
-    // }
+    function handleChangeEnglish() {
+        let language = 'english'
+        props.changeLanguage(language);
+    }
+
+    function handleChangeVietNam() {
+        let language = 'vietnam'
+        props.changeLanguage(language);
+    }
 
     return (
         <div className="home">
@@ -64,30 +69,32 @@ function Home() {
                     </svg>
                 </div>
                 <div className='home__language-login'>
-                    <div className='home__language' ref={homeLanguage}>
-                        <FaGlobe onClick={handleAppear} />
-                        <p className='home__language-text' onClick={handleAppear}>Tiếng Việt</p>
-                        <FaAngleDown className='home-icon-down' onClick={handleAppear} />
+                    <div className='home__language' ref={homeLanguage} onClick={handleAppear} >
+                        <FaGlobe />
+                        <p className='home__language-text'>Tiếng Việt</p>
+                        <FaAngleDown className='home-icon-down' />
                         {appear && <ul className='language-list language-position'>
-                            <li className='language__item active--language'>Tiếng Việt</li>
-                            <li className='language__item'>English</li>
+                            <li className='language__item' onClick={handleChangeVietNam}>Tiếng Việt</li>
+                            <li className='language__item' onClick={handleChangeEnglish}>English</li>
                         </ul>
                         }
 
                     </div>
-                    <div className='home__login'>
-                        <Link to='/login'>Đăng nhập</Link>
-                    </div>
+                    <Link to='/login' className='home__login-link'>
+                        <div className='home__login'>
+                            {isVietNam ? 'Đăng nhập' : 'Sign in'}
+                        </div>
+                    </Link>
                 </div>
             </div>
             <div className='home__content'>
-                <h2 className='home__content-heading'>Chương trình truyền hình, phim không giới hạn và nhiều nội dung khác.</h2>
-                <p className='home__content-description'>Xem ở mọi nơi. Hủy bất kỳ lúc nào.</p>
-                <p className='home__content-text'>Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.</p>
+                <h2 className='home__content-heading'>{isVietNam ? 'Chương trình truyền hình, phim không giới hạn và nhiều nội dung khác.' : 'Unlimited movies, TV shows, and more.'}</h2>
+                <p className='home__content-description'>{isVietNam ? 'Xem ở mọi nơi. Hủy bất kỳ lúc nào.' : 'Watch anywhere. Cancel anytime.'}</p>
+                <p className='home__content-text'>{isVietNam ? 'Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.' : 'Ready to watch? Enter your email to create or restart your membership.'}</p>
                 <div className='home__content-input'>
-                    <input className='home__content-boxinput' type='email' placeholder='Địa chỉ email' />
+                    <input className='home__content-boxinput' type='email' placeholder={isVietNam ? 'Địa chỉ email' : 'Email address'} />
                     <div className='home__content-boxbtn'>
-                        <span>Bắt đầu</span>
+                        <span>{isVietNam ? 'Bắt đầu' : 'Get Started'}</span>
                         <FaAngleRight className='home__icon-right' />
                     </div>
                 </div>
@@ -96,4 +103,14 @@ function Home() {
     )
 }
 
-export default Home
+const mapStateToProps = (state) => {
+    return { language: state.language }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

@@ -77,19 +77,18 @@
   margin-top: 2px;
 }
 
-.home__login {
+.home__login-link {
   font-size: 1.6rem;
   background-color: #e50914;
   border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-}
-
-.home__login a {
+  width: 112px;
   text-decoration: none;
   color: var(--white-color);
   font-weight: 400;
-  padding: 7px 17px;
+  display: flex;
+}
+
+.home__login {
   margin: auto;
   transform: translateY(-2px);
 }
@@ -123,7 +122,7 @@
 }
 
 .home__content-input {
-  width: 620px;
+  /* width: 620px; */
   height: 60px;
   display: flex;
 }
@@ -140,8 +139,8 @@
 .home__content-boxbtn {
   background-color: #e30813;
   font-size: 2.6rem;
-  width: 168px;
-  padding: 8px 0px 8px 32px;
+  /* width: 168px; */
+  padding: 8px 16px 8px 24px;
   display: flex;
   align-items: center;
 }

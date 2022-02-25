@@ -1,6 +1,7 @@
 import './HomeHeader.css'
 import { FaGlobe, FaAngleDown, FaAngleRight } from 'react-icons/fa'
 import { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function useOutsideAlerter(ref, setAppear) {
     useEffect(() => {
@@ -75,7 +76,7 @@ function Home() {
 
                     </div>
                     <div className='home__login'>
-                        <a href='/login'>Đăng nhập</a>
+                        <Link to='/login'>Đăng nhập</Link>
                     </div>
                 </div>
             </div>

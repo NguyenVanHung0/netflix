@@ -1,5 +1,6 @@
 {
   "name": "netflix",
+  "homepage": "https://nguyenvanhung0.github.io/netflix/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

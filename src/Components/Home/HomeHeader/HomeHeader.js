@@ -76,7 +76,7 @@ function Home() {
 
                     </div>
                     <div className='home__login'>
-                        <Link to='/login'>Đăng nhập</Link>
+                        <Link to='login'>Đăng nhập</Link>
                     </div>
                 </div>
             </div>

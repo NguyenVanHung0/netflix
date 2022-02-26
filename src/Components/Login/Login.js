@@ -30,6 +30,7 @@ function useOutsideAlerter(ref, setAppear) {
 
 function Login() {
     const [appear, setAppear] = useState(false)
+    const [servicesAppear, setServicesAppear] = useState(false)
     const homeLanguage = useRef()
 
     useOutsideAlerter(homeLanguage, setAppear);
@@ -38,6 +39,7 @@ function Login() {
         if (homeLanguage.current && appear === false) {
             console.log('hi')
             homeLanguage.current.style.borderRadius = '4px'
+            window.location.replace("http://www.w3schools.com");
         }
         else {
             homeLanguage.current.style.borderRadius = '2px'
@@ -84,12 +86,21 @@ function Login() {
                         </div>
                         <div className='login__form-register'>
                             Bạn mới tham gia Netflix?
-                            <a href=''>Đăng kí ngay</a>
+                            <Link to='/'>Đăng kí ngay</Link>
                         </div>
                         <div className='login__form-more-inf'>
                             Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải là robot.
-                            <span>Tìm hiểu thêm</span>
+                            <span onClick={() => setServicesAppear(!servicesAppear)}>Tìm hiểu thêm</span>
                         </div>
+                        {servicesAppear &&
+                            <div className='rules-services'>
+                                Thông tin do Google reCAPTCHA thu thập sẽ tuân theo
+                                <Link to=''> Chính sách Quyền riêng tư </Link> and
+                                <Link to=''> Điều khoản dịch vụ </Link>
+                                của Google, và được dùng để cung cấp, duy trì và cải thiện dịch vụ reCAPTCHA cũng như các mục đích bảo mật nói chung (thông tin này không được dùng để cá nhân hóa quảng cáo của Google).
+                            </div>
+                        }
+
                     </div>
                 </form>
             </div>

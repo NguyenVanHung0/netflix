@@ -1,0 +1,77 @@
+.regform__body {
+  padding: 20px 218px 170px;
+  display: flex;
+  justify-content: center;
+}
+
+.regform__body-box {
+  width: 440px;
+}
+
+.regform__body-form.registration__body-box {
+  text-align: left;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.reg__body-form-header-step {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.reg__body-form-header h3 {
+  font-size: 3.2rem;
+  color: #333;
+  margin: 0px 0px 13px;
+}
+
+.reg__body-form-header p {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.reg__body-form-input {
+  margin: 10px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reg__body-form-input-box {
+  height: 60px;
+  font-size: 1.6rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.reg__body-form-input-checkbox {
+  width: 27px;
+  height: 27px;
+  color: #fff;
+  margin: 0;
+  border-radius: 0;
+}
+
+.reg__body-form-input-send-email {
+  display: flex;
+  height: auto;
+}
+
+.reg__body-form-input label {
+  display: block;
+  font-size: 1.6rem;
+  margin: 8px 0px 0px 4px;
+  padding: 6px 0px;
+  transform: translateY(-18px);
+}
+
+.reg__body-form-btn {
+  width: 100%;
+}
+
+.registration__body-btn {
+  margin: 0;
+  width: inherit;
+}

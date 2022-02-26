@@ -1,0 +1,132 @@
+.registration {
+  background-color: var(--white-color);
+}
+
+.registration__header {
+  height: 90px;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home__logo.regiatration__header-logo {
+  margin-top: 24px;
+  width: 167px;
+  height: 45px;
+  transform: translateX(-15px);
+}
+
+.registration__header-login {
+  padding: 0px 40px;
+}
+
+.registration__header-login a {
+  text-decoration: none;
+  line-height: 90px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.registration__header-login a:hover {
+  text-decoration: underline;
+}
+
+.registration__body {
+  display: flex;
+  justify-content: center;
+}
+
+.registration__body-box {
+  width: 340px;
+  text-align: center;
+  padding-top: 120px;
+}
+
+.registration__body-device-img {
+  background: url("../../assets/img/device.png") top center / contain no-repeat;
+  height: 90px;
+  width: 260px;
+  margin: 0px 40px 20px;
+}
+
+.registration__body-content-step {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.registration__body-content-header {
+  font-size: 3.2rem;
+  margin-bottom: 13px;
+  font-weight: 700;
+  color: #333;
+}
+
+.registration__body-content-text {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+.registration__body-btn {
+  margin-bottom: 75px;
+  height: 64px;
+  width: 340px;
+}
+
+.registration__body-btn button {
+  width: 100%;
+  height: 100%;
+  background-color: #e50914;
+  color: var(--white-color);
+  border: none;
+  border-radius: 4px;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.registration__body-btn button:hover {
+  cursor: pointer;
+  background-color: #f6121d;
+}
+
+.registration__footer {
+  background-color: #f3f3f3;
+  border-top: 1px solid #e5e5e5;
+  padding: 30px 67px 20px;
+}
+
+.footer__content.register__footer-content {
+  width: 1000px;
+}
+
+.registration__footer-language {
+  position: relative;
+}
+
+.footer__language-btn.registration__footer-language-btn {
+  background-color: var(--white-color);
+  color: #333;
+}
+
+.footer__language-btn-text.registration__footer-language-btn-text {
+  color: #757575;
+}
+
+.language-list.registration__language-list {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  border-width: 1px 1px 0px;
+  border-color: #757575;
+  margin-bottom: 0;
+  /* z-index: 1; */
+}
+
+.language__item.registration__language-item {
+  background-color: var(--white-color);
+}
+
+.language__item.registration__language-item:hover {
+  background-color: rgb(65, 167, 207);
+  color: var(--white-color);
+}

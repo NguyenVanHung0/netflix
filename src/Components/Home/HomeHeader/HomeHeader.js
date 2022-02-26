@@ -3,6 +3,7 @@ import { FaGlobe, FaAngleDown, FaAngleRight } from 'react-icons/fa'
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import withRouter from '../../../router/withRouter'
 
 function useOutsideAlerter(ref, setAppear) {
     useEffect(() => {
@@ -27,11 +28,10 @@ function useOutsideAlerter(ref, setAppear) {
     }, [ref]);
 }
 
-function Home(props) {
+function HomeHeader(props) {
     const [appear, setAppear] = useState(false)
     const homeLanguage = useRef()
     let isVietNam = props.language == 'vietnam'
-
     useOutsideAlerter(homeLanguage, setAppear);
     function handleAppear() {
         setAppear(!appear)
@@ -51,6 +51,11 @@ function Home(props) {
     function handleChangeVietNam() {
         let language = 'vietnam'
         props.changeLanguage(language);
+    }
+
+    function handleClickGetStart() {
+        const navigate = props.router.navigate;
+        navigate('/signup/registration')
     }
 
     return (
@@ -94,7 +99,7 @@ function Home(props) {
                 <div className='home__content-input'>
                     <input className='home__content-boxinput' type='email' placeholder={isVietNam ? 'Địa chỉ email' : 'Email address'} />
                     <div className='home__content-boxbtn'>
-                        <span>{isVietNam ? 'Bắt đầu' : 'Get Started'}</span>
+                        <span onClick={handleClickGetStart}>{isVietNam ? 'Bắt đầu' : 'Get Started'}</span>
                         <FaAngleRight className='home__icon-right' />
                     </div>
                 </div>
@@ -113,4 +118,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(HomeHeader))

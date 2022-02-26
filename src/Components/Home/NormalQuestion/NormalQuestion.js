@@ -93,7 +93,7 @@ function NormalQuestion(props) {
                 </li>
                 <li className='home__question-item'>
                     <div className='home__question-item-main' onClick={(e) => handleClickItem(e)}>
-                        <p className='home__question-item-content' onClick={(e) => handleClickChilren(e)}>{isVietNam ? 'Netflix có phù hợp cho trẻ em không?</p>' : 'Is Netflix good for kids?'}</p>
+                        <p className='home__question-item-content' onClick={(e) => handleClickChilren(e)}>{isVietNam ? 'Netflix có phù hợp cho trẻ em không?' : 'Is Netflix good for kids?'}</p>
                         <FaPlus className='plus-icon' />
                     </div>
                     <div className='home__question-item-support' style={{ display: "none" }}>

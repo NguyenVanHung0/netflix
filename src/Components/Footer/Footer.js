@@ -30,14 +30,13 @@ function useOutsideAlerter(ref, setAppear) {
 function Footer(props) {
     const [appear, setAppear] = useState(false)
     const homeLanguage = useRef()
-    const isVietNam = props.language == 'vietnam'
+    let isVietNam = props.language == 'vietnam'
 
     useOutsideAlerter(homeLanguage, setAppear);
 
     function handleAppear() {
         setAppear(!appear)
         if (homeLanguage.current && appear === false) {
-            console.log('hi')
             homeLanguage.current.style.borderRadius = '4px'
         }
         else {
@@ -45,15 +44,17 @@ function Footer(props) {
         }
     }
 
+    function handleChangeVietNam() {
+        let language = 'vietnam'
+        props.changeLanguage(language);
+    }
+
     function handleChangeEnglish() {
         let language = 'english'
         props.changeLanguage(language);
     }
 
-    function handleChangeVietNam() {
-        let language = 'vietnam'
-        props.changeLanguage(language);
-    }
+
 
     return (
         <div className='footer'>

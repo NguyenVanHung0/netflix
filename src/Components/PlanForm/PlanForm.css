@@ -18,6 +18,7 @@
 
 .planform__body-box-list {
   list-style: none;
+  padding: 0;
 }
 
 .planform__body-box-item {

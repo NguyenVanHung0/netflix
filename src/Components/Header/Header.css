@@ -1,0 +1,34 @@
+.header {
+  height: 90px;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  margin-top: 24px;
+  width: 167px;
+  height: 45px;
+  transform: translateX(-15px);
+  margin-left: 56px;
+}
+
+.header__logo-img {
+  height: 100%;
+}
+
+.header-login {
+  padding: 0px 40px;
+}
+
+.header-login a {
+  text-decoration: none;
+  line-height: 90px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.header-login a:hover {
+  text-decoration: underline;
+}

@@ -2,34 +2,12 @@
   background-color: var(--white-color);
 }
 
-.registration__header {
-  height: 90px;
-  border-bottom: 1px solid #e6e6e6;
-  display: flex;
-  justify-content: space-between;
-}
-
-.home__logo.regiatration__header-logo {
-  margin-top: 24px;
-  width: 167px;
-  height: 45px;
-  transform: translateX(-15px);
-}
-
-.registration__header-login {
-  padding: 0px 40px;
-}
-
 .registration__header-login a {
   text-decoration: none;
   line-height: 90px;
   font-size: 1.9rem;
   font-weight: 700;
   color: #333;
-}
-
-.registration__header-login a:hover {
-  text-decoration: underline;
 }
 
 .registration__body {

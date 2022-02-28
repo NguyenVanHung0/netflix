@@ -1,6 +1,6 @@
 import HomeContent from './HomContent/HomeContent'
 import NormalQuestion from './NormalQuestion/NormalQuestion'
-import Footer from '../Footer/Footer'
+import HomeFooter from './HomeFooter/HomeFooter'
 import HomeHeader from './HomeHeader/HomeHeader'
 import { Fragment } from 'react'
 
@@ -10,7 +10,7 @@ function Home() {
             <HomeHeader />
             <HomeContent />
             <NormalQuestion />
-            <Footer />
+            <HomeFooter />
         </Fragment>
     )
 }

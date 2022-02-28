@@ -1,0 +1,169 @@
+.planform__body {
+  padding: 20px 201px 0px;
+}
+
+.planform__body-box-step {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0;
+}
+
+.planform__body-box-heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 13px;
+  margin-top: 0;
+  color: #333;
+}
+
+.planform__body-box-list {
+  list-style: none;
+}
+
+.planform__body-box-item {
+  margin-top: 6px;
+}
+
+.planform__body-box-item-icon {
+  color: #e50914;
+  margin-right: 10px;
+  transform: translateY(6px);
+}
+
+.planform__body-box-item-text {
+  font-size: 1.8rem;
+  color: #333;
+  display: inline-block;
+  margin: 0;
+}
+
+.planform__body-box-package {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 28px;
+  position: sticky;
+  top: 14px;
+  background-color: white;
+}
+
+.planform__body-box-package::before {
+  content: "";
+  height: 14px;
+  width: 100%;
+  position: absolute;
+  top: -14px;
+  background-color: white;
+}
+
+.planform__body-box-package-list {
+  display: flex;
+  /* width: 60%; */
+}
+
+.planform__body-box-package-item {
+  position: relative;
+  margin: 0px 17px;
+  padding: 1px;
+  width: 118px;
+  height: 118px;
+  /* background-color: #e50914; */
+  background-color: #ef6b72;
+  line-height: 118px;
+  color: #fbffff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.planform__body-box-package-item-active {
+  background-color: #e50914 !important;
+}
+
+.planform__body-box-package-item-active::after {
+  content: "";
+  border-width: 17px 15px;
+  border-color: #e50914 transparent transparent;
+  border-style: solid;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.planform__body-box-table {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.planform__body-box-table tr {
+  display: block;
+  height: 61px;
+  font-size: 1.6rem;
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+
+.planform__body-box-table tr td:first-child {
+  width: 331px;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.planform__body-box-table tr:nth-child(4) {
+  display: block;
+  height: 61px;
+  font-size: 1.6rem;
+  color: #333;
+  border: none;
+}
+
+.planform__body-box-table tr:last-child {
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+}
+
+.planform__body-box-table-lastChild-tr .planform__table-device {
+  margin: 12px 0px;
+}
+
+.planform__body-box-table-lastChild-tr td:nth-child(2) {
+  color: #e50914;
+}
+
+.planform__body-box-table tr td {
+  width: calc(609px / 4);
+  padding: 12px 16px;
+  text-align: center;
+  color: #737373;
+  font-weight: 700;
+}
+
+.planform__body-box-table-active {
+  color: #e50914 !important;
+}
+
+.planform__body-box-content {
+  font-size: 1.3rem;
+  color: #737373;
+}
+
+.registration__body-btn.signup__btn.planform__btn-next {
+  width: 440px;
+  margin: auto;
+  margin-top: 24px;
+  margin-bottom: 170px;
+}
+
+.planform__body-box-content a {
+  color: #1871eb;
+  text-decoration: none;
+}
+
+.planform__body-box-content a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,8 @@
+.App {
+  box-sizing: border-box;
+}
+
+:root {
+  --white-color: white;
+  --black-color: black;
+}

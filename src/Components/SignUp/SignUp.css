@@ -1,0 +1,56 @@
+.signup__body {
+  display: flex;
+}
+
+.signup__body-box {
+  margin: auto;
+  width: 340px;
+  text-align: center;
+}
+
+.signup__body-content {
+  width: inherit;
+  margin: 100px 0px 20px;
+}
+
+.signup__body-icon-icon {
+  font-size: 5rem;
+  color: #e52d34;
+}
+
+.signup__body-header-step {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.signup__body-header h3 {
+  font-size: 3.2rem;
+  margin-bottom: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.signup__body-list {
+  margin: 15px 0px 20px;
+  list-style: none;
+  text-align: left;
+  display: block;
+}
+
+.signup__body-item {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.signup__body-item-icon {
+  margin-right: 10px;
+  color: #e50914;
+  width: 28px;
+  height: 28px;
+}
+
+.registration__body-btn.signup__btn {
+  margin-top: 45px;
+}

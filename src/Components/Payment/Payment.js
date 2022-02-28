@@ -4,6 +4,10 @@ import { FaGlobe, FaAngleDown } from 'react-icons/fa'
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import withRouter from '../../router/withRouter'
+import visa from '../../assets/img/visa.svg'
+import mastercard from '../../assets/img/mastercard.svg'
+import amex from '../../assets/img/amex.svg'
+import right from '../../assets/img/right.svg'
 
 function useOutsideAlerter(ref, setAppear) {
     useEffect(() => {
@@ -74,7 +78,7 @@ function Payment(props) {
                 </div>
             </div>
 
-            <div className='pament__body'>
+            <div className='payment__body'>
                 <div className='payment__body-box'>
                     <div className='payment__body-content'>
                         <div className='payment__body-content-icon'>
@@ -108,16 +112,24 @@ function Payment(props) {
                                     </g>
                                 </svg>
                             </div>
-                            <div className='payment__body-content-method-link'>
-                                <Link to=''>
-                                    <div className='payment__body-content-method-select'>
+                            <Link to='' className='payment-link'>
+                                <div className='payment__body-content-method-link'>
 
+                                    <div className='payment__body-content-method-select'>
+                                        <div className='payment__body-content-method-select-text'>
+                                            Thẻ ghi nợ hoặc thẻ tín dụng
+                                        </div>
+                                        <div className='payment__body-content-method-select-img'>
+                                            <img src={visa} />
+                                            <img src={mastercard} />
+                                            <img src={amex} />
+                                        </div>
                                     </div>
                                     <div className='payment__body-content-method-icon'>
-                                        &gt;
+                                        <img src={right} />
                                     </div>
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

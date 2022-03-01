@@ -6,7 +6,7 @@ function Header() {
         <div className="header">
 
             <div className="header-logo">
-                <Link to='/netflix'>
+                <Link to='/'>
                     <svg viewBox="0 0 111 30" className='header__logo-img' >
                         <g>
                             <path

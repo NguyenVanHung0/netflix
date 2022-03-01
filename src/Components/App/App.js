@@ -7,6 +7,7 @@ import SignUp from '../SignUp/SignUp'
 import PlanForm from '../PlanForm/PlanForm'
 import Payment from '../Payment/Payment'
 import Creditoption from '../Creditoption/Creditoption'
+import BrowserHome from '../Browser/BrowserHome/BrowserHome'
 import { Routes, Route } from 'react-router-dom'
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/signup/payment' element={<Payment />} />
         <Route path='/signup/planform' element={<PlanForm />} />
         <Route path='/signup/creditoption' element={<Creditoption />} />
+        <Route path='/browser' element={<BrowserHome />} />
       </Routes>
     </div>
   );

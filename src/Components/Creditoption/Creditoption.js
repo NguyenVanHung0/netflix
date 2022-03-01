@@ -4,8 +4,15 @@ import Footer from '../Footer/Footer'
 import visa from '../../assets/img/visa.svg'
 import mastercard from '../../assets/img/mastercard.svg'
 import amex from '../../assets/img/amex.svg'
+import withRouter from '../../router/withRouter'
 
-function Creditoption() {
+function Creditoption(props) {
+
+    function handleClickChange() {
+        const navigate = props.router.navigate
+        navigate('/signup/planform')
+    }
+
     return (
         <div className='creditoption'>
             <Header />
@@ -36,7 +43,7 @@ function Creditoption() {
                                 <p className='creditoption__body-text-price-textdark'>260.000 ₫/tháng</p>
                                 <p className='creditoption__body-text-price-textlight'>Gói Cao cấp</p>
                             </div>
-                            <button className='creditoption__body-text-price-btn'>
+                            <button onClick={handleClickChange} className='creditoption__body-text-price-btn'>
                                 Thay đổi
                             </button>
                         </div>
@@ -64,4 +71,4 @@ function Creditoption() {
     )
 }
 
-export default Creditoption
+export default withRouter(Creditoption)

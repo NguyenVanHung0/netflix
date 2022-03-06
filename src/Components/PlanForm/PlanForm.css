@@ -132,10 +132,6 @@
   margin: 12px 0px;
 }
 
-.planform__body-box-table-lastChild-tr td:nth-child(2) {
-  color: #e50914;
-}
-
 .planform__body-box-table tr td {
   width: calc(609px / 4);
   padding: 12px 16px;

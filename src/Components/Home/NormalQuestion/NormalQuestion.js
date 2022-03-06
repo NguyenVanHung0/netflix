@@ -1,10 +1,13 @@
 import './NormalQuestion.css'
 import { FaPlus, FaAngleRight } from 'react-icons/fa'
 import { connect } from 'react-redux'
+import withRouter from '../../../router/withRouter'
+import { useRef } from 'react'
 
 
 function NormalQuestion(props) {
     const isVietNam = props.language == 'vietnam'
+    const inputElement = useRef()
 
     function handleClickItem(e) {
         var supportItem = e.target.parentElement.querySelector('.home__question-item-support')
@@ -34,6 +37,33 @@ function NormalQuestion(props) {
             plusIcon.style.transform = 'rotate(90deg)'
         }
     }
+
+    function validateEmail(emailAdress) {
+        let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (emailAdress.match(regexEmail)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function handleClickGetStart() {
+        if (inputElement.current.value != '') {
+            if (validateEmail(inputElement.current.value)) {
+                const email = inputElement.current.value;
+                props.setEmail(email)
+                const navigate = props.router.navigate;
+                navigate('/signup/registration')
+            }
+            else {
+                alert('not an email')
+            }
+        }
+        else {
+            alert('invalid email')
+        }
+    }
+
 
     return (
         <div className='home__question'>
@@ -106,9 +136,9 @@ function NormalQuestion(props) {
             <div className='home__question-input'>
                 <p className='home__question-content-text'>{isVietNam ? 'Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.' : 'Ready to watch? Enter your email to create or restart your membership.'}</p>
                 <div className='home__question-content-input'>
-                    <input className='home__question-content-boxinput' type='email' placeholder={isVietNam ? 'Địa chỉ email' : 'Email address'} />
+                    <input ref={inputElement} className='home__question-content-boxinput' type='email' placeholder={isVietNam ? 'Địa chỉ email' : 'Email address'} />
                     <div className='home__question-content-boxbtn'>
-                        <span>{isVietNam ? 'Bắt đầu' : 'Get Started'}</span>
+                        <span onClick={handleClickGetStart}>{isVietNam ? 'Bắt đầu' : 'Get Started'}</span>
                         <FaAngleRight className='home__question-icon-right' />
                     </div>
                 </div>
@@ -121,4 +151,10 @@ const mapStateToProps = (state) => {
     return { language: state.language }
 }
 
-export default connect(mapStateToProps)(NormalQuestion)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setEmail: (email) => dispatch({ type: 'SET_EMAIL', payload: email })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(NormalQuestion))

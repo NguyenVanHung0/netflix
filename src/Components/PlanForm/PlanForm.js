@@ -12,11 +12,32 @@ import Footer from '../Footer/Footer'
 
 function SignUp(props) {
     let isVietNam = props.language == 'vietnam'
+    const [active, setActive] = useState(0)
+    const packageArray = ['Di động', 'Cơ bản', 'Tiêu chuẩn', 'Cao cấp']
+    const packageArrayEng = ['Mobile', 'Basic', 'Standard', 'Premium']
 
     function handleClickNext() {
+        props.setPackage(packageArray[active])
         const navigate = props.router.navigate
         navigate('/signup/payment')
     }
+
+    const handleClickSelect = (index) => {
+        setActive(index)
+    }
+
+    const allTdArray = document.querySelectorAll('tr td');
+    allTdArray.forEach((td, index) => {
+        td.classList.remove('planform__body-box-table-active')
+    })
+
+    useEffect(() => {
+        const tdArray = document.querySelectorAll(`tr td:nth-child(${active + 2})`);
+        tdArray.forEach((td, index) => {
+            td.classList.add('planform__body-box-table-active')
+        })
+    }, [active])
+
 
     return (
         <div>
@@ -25,9 +46,9 @@ function SignUp(props) {
                 <div className='planform__body-box'>
                     <div className='planform__body-box-header'>
                         <p className='planform__body-box-step'>
-                            BƯỚC <b>2</b>/<b>3</b>
+                            {isVietNam ? 'BƯỚC' : 'STEP'} <b>2</b>/<b>3</b>
                         </p>
-                        <h3 className='planform__body-box-heading'>Chọn gói dịch vụ phù hợp với bạn</h3>
+                        <h3 className='planform__body-box-heading'>{isVietNam ? 'Chọn gói dịch vụ phù hợp với bạn' : 'Choose the plan that’s right for you'}</h3>
                         <ul className='planform__body-box-list'>
                             <li className='planform__body-box-item'>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="planform__body-box-item-icon" >
@@ -38,7 +59,7 @@ function SignUp(props) {
                                         fill="currentColor"
                                     ></path>
                                 </svg>
-                                <p className='planform__body-box-item-text'>Xem mọi nội dung bạn muốn. Không có quảng cáo.</p>
+                                <p className='planform__body-box-item-text'>{isVietNam ? 'Xem mọi nội dung bạn muốn. Không có quảng cáo.' : 'Watch all you want. Ad-free.'}</p>
                             </li>
                             <li className='planform__body-box-item'>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="planform__body-box-item-icon" >
@@ -49,7 +70,7 @@ function SignUp(props) {
                                         fill="currentColor"
                                     ></path>
                                 </svg>
-                                <p className='planform__body-box-item-text'>Đề xuất dành riêng cho bạn.</p>
+                                <p className='planform__body-box-item-text'>{isVietNam ? 'Đề xuất dành riêng cho bạn.' : 'Recommendations just for you.'}</p>
                             </li>
                             <li className='planform__body-box-item'>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="planform__body-box-item-icon" >
@@ -60,51 +81,58 @@ function SignUp(props) {
                                         fill="currentColor"
                                     ></path>
                                 </svg>
-                                <p className='planform__body-box-item-text'>Thay đổi hoặc hủy gói dịch vụ của bạn bất cứ khi nào.</p>
+                                <p className='planform__body-box-item-text'>{isVietNam ? 'Thay đổi hoặc hủy gói dịch vụ của bạn bất cứ khi nào.' : 'Change or cancel your plan anytime.'}</p>
                             </li>
                         </ul>
                     </div>
                     <div className='planform__body-box-package'>
                         <div className='planform__body-box-package-list'>
-                            <div className='planform__body-box-package-item planform__body-box-package-item-active'>
-                                Di động
+                            {
+                                packageArray.map((pac, index) => {
+                                    return (
+                                        <div key={index} onClick={() => handleClickSelect(index)} className={active == index ? 'planform__body-box-package-item planform__body-box-package-item-active' : 'planform__body-box-package-item'}>
+                                            {isVietNam ? pac : packageArrayEng[index]}
+                                        </div>
+                                    )
+                                })
+                            }
+
+                            {/* <div className='planform__body-box-package-item'>
+                                {isVietNam ? 'Cơ bản' : 'Basic'}
                             </div>
                             <div className='planform__body-box-package-item'>
-                                Cơ bản
+                                {isVietNam ? 'Tiêu chuẩn' : 'Standard'}
                             </div>
                             <div className='planform__body-box-package-item'>
-                                Tiêu chuẩn
-                            </div>
-                            <div className='planform__body-box-package-item'>
-                                Cao cấp
-                            </div>
+                                {isVietNam ? 'Cao cấp' : 'Premium'}
+                            </div> */}
                         </div>
                     </div>
                     <table className='planform__body-box-table'>
                         <tbody>
                             <tr>
-                                <td>Giá hàng tháng</td>
-                                <td className='planform__body-box-table-active'>70.000đ</td>
+                                <td>{isVietNam ? 'Giá hàng tháng' : 'Monthly price'}</td>
+                                <td>70.000đ</td>
                                 <td>180.000đ</td>
                                 <td>220.000đ</td>
                                 <td>260.000đ</td>
                             </tr>
                             <tr>
-                                <td>Chất lượng video</td>
-                                <td className='planform__body-box-table-active'>Tốt</td>
-                                <td>Tốt</td>
-                                <td>Tốt hơn</td>
-                                <td>Tốt nhất</td>
+                                <td>{isVietNam ? 'Chất lượng video' : 'Video quality'}</td>
+                                <td>{isVietNam ? 'Tốt' : 'Good'}</td>
+                                <td>{isVietNam ? 'Tốt' : 'Good'}</td>
+                                <td>{isVietNam ? 'Tốt hơn' : 'Better'}</td>
+                                <td>{isVietNam ? 'Tốt nhất' : 'Best'}</td>
                             </tr>
                             <tr>
-                                <td>Độ phân giải</td>
-                                <td className='planform__body-box-table-active'>480p</td>
+                                <td>{isVietNam ? 'Độ phân giải' : 'Resolution'}</td>
+                                <td>480p</td>
                                 <td>480p</td>
                                 <td>1080p</td>
                                 <td>4K+HDR</td>
                             </tr>
                             <tr className='planform__body-box-table-lastChild-tr'>
-                                <td>Các thiết bị bạn có thể dùng để xem</td>
+                                <td>{isVietNam ? 'Các thiết bị bạn có thể dùng để xem' : 'Devices you can use to watch'}</td>
                                 <td>
                                     <div className='planform__table-device'>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="planform__table-device-icon">
@@ -116,7 +144,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Điện thoại
+                                            {isVietNam ? 'Điện thoại' : 'Mobile'}
                                         </div>
                                     </div>
                                     <div className='planform__table-device'>
@@ -129,7 +157,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Máy tính bảng
+                                            {isVietNam ? 'Máy tính bảng' : 'Tablet'}
                                         </div>
                                     </div>
                                 </td>
@@ -144,7 +172,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Điện thoại
+                                            {isVietNam ? 'Điện thoại' : 'Mobile'}
                                         </div>
                                     </div>
                                     <div className='planform__table-device'>
@@ -157,7 +185,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Máy tính bảng
+                                            {isVietNam ? 'Máy tính bảng' : 'Tablet'}
                                         </div>
                                     </div>
                                     <div className='planform__table-device'>
@@ -170,7 +198,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Máy tính
+                                            {isVietNam ? 'Máy tính' : 'Computer'}
                                         </div>
                                     </div>
                                     <div className='planform__table-device'>
@@ -183,7 +211,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Tivi
+                                            {isVietNam ? 'Tivi' : 'TV'}
                                         </div>
                                     </div>
                                 </td>
@@ -198,7 +226,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Điện thoại
+                                            {isVietNam ? 'Điện thoại' : 'Mobile'}
                                         </div>
                                     </div>
                                     <div className='planform__table-device'>
@@ -211,7 +239,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Máy tính bảng
+                                            {isVietNam ? 'Máy tính bảng' : 'Tablet'}
                                         </div>
                                     </div>
                                     <div className='planform__table-device'>
@@ -224,7 +252,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Máy tính
+                                            {isVietNam ? 'Máy tính' : 'Computer'}
                                         </div>
                                     </div>
                                     <div className='planform__table-device'>
@@ -237,7 +265,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Tivi
+                                            {isVietNam ? 'Tivi' : 'TV'}
                                         </div>
                                     </div>
                                 </td>
@@ -252,7 +280,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Điện thoại
+                                            {isVietNam ? 'Điện thoại' : 'Mobile'}
                                         </div>
                                     </div>
                                     <div className='planform__table-device'>
@@ -265,7 +293,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Máy tính bảng
+                                            {isVietNam ? 'Máy tính bảng' : 'Tablet'}
                                         </div>
                                     </div>
                                     <div className='planform__table-device'>
@@ -278,7 +306,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Máy tính
+                                            {isVietNam ? 'Máy tính' : 'Computer'}
                                         </div>
                                     </div>
                                     <div className='planform__table-device'>
@@ -291,7 +319,7 @@ function SignUp(props) {
                                             ></path>
                                         </svg>
                                         <div className='planform__table-name-device'>
-                                            Tivi
+                                            {isVietNam ? 'Tivi' : 'TV'}
                                         </div>
                                     </div>
                                 </td>
@@ -299,11 +327,11 @@ function SignUp(props) {
                         </tbody>
                     </table>
                     <div className='planform__body-box-content'>
-                        Việc bạn có thể xem ở chế độ HD (720p), Full HD (1080p), Ultra HD (4K) và HDR hay không phụ thuộc vào dịch vụ internet và khả năng của thiết bị. Không phải tất cả nội dung đều có sẵn ở mọi độ phân giải. Xem <a href=''> Điều khoản sử dụng</a> của chúng tôi để biết thêm chi tiết.
-                        <br /> <br />Chỉ những người sống cùng bạn mới có thể dùng tài khoản của bạn. Xem trên 4 thiết bị khác nhau cùng lúc với gói Cao cấp, 2 với gói Tiêu chuẩn và 1 với gói Cơ bản và Di động.
+                        {isVietNam ? 'Việc bạn có thể xem ở chế độ HD (720p), Full HD (1080p), Ultra HD (4K) và HDR hay không phụ thuộc vào dịch vụ internet và khả năng của thiết bị. Không phải tất cả nội dung đều có sẵn ở mọi độ phân giải. Xem' : 'HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our'} <a href='https://help.netflix.com/legal/termsofuse'> {isVietNam ? 'Điều khoản sử dụng' : 'Terms of User'}</a> {isVietNam ? 'của chúng tôi để biết thêm chi tiết.' : ' for more details.'}
+                        <br /> <br />{isVietNam ? 'Chỉ những người sống cùng bạn mới có thể dùng tài khoản của bạn. Xem trên 4 thiết bị khác nhau cùng lúc với gói Cao cấp, 2 với gói Tiêu chuẩn và 1 với gói Cơ bản và Di động.' : 'Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard, and 1 with Basic and Mobile.'}
                     </div>
                     <div className='registration__body-btn signup__btn planform__btn-next'>
-                        <button onClick={handleClickNext}>Tiếp theo</button>
+                        <button onClick={handleClickNext}>{isVietNam ? 'Tiếp theo' : 'Next'}</button>
                     </div>
                 </div>
             </div>
@@ -313,13 +341,17 @@ function SignUp(props) {
 }
 
 const mapStateToProps = (state) => {
-    return { language: state.language }
+    return {
+        language: state.language
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language })
+        setPackage: (packageSelect) => dispatch({ type: 'SET_PACKAGE', payload: packageSelect })
     }
 }
+
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(SignUp))

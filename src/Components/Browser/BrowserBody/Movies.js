@@ -1,22 +1,18 @@
-import './BrowserHome.css'
+import Section from "./Section/Section";
 import BrowserHeader from '../BrowserHeader/BrowserHeader'
-import Section from '../BrowserBody/Section/Section'
-import Footer from '../../Footer/Footer'
-import TVSeries from '../BrowserBody/TVSeries'
-import { Routes, Route } from 'react-router-dom'
+import Footer from "../../Footer/Footer";
 
-
-function BrowserHome() {
+function Movies() {
     return (
-        <div>
-            <BrowserHeader indexList='0' />
+        <>
+            <BrowserHeader indexList='2' />
             <Section category='trending' header='Trending Now' />
             <Section category='rated' header='Top Rated on Fakeflix' />
             <Section category='originals' header='Fakeflix Originals' />
             <Section category='animation' header='Animation' />
             <Footer />
-        </div>
+        </>
     )
 }
 
-export default BrowserHome
+export default Movies

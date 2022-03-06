@@ -1,7 +1,13 @@
 import './Header.css'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import withRouter from '../../router/withRouter'
+import { useState, useEffect } from 'react'
 
-function Header() {
+function Header(props) {
+    const isVietNam = props.language == 'vietnam'
+
+
     return (
         <div className="header">
 
@@ -20,11 +26,15 @@ function Header() {
             </div>
 
             <div className="header-login">
-                <Link to=''>Đăng nhập</Link>
+                <Link to='/'>{isVietNam ? 'Đăng xuất' : 'Sign Out'}</Link>
             </div>
         </div>
     )
 }
 
+const mapStateToProps = (state) => {
+    return { language: state.language }
+}
 
-export default Header
+
+export default connect(mapStateToProps)(withRouter(Header))

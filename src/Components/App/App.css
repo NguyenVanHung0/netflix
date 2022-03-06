@@ -6,3 +6,45 @@
   --white-color: white;
   --black-color: black;
 }
+
+/* keyframe */
+
+@keyframes leftToRight {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 200px;
+  }
+}
+
+@keyframes righttoleft {
+  from {
+    width: 200px;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+@keyframes up40 {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes up100 {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

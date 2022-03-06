@@ -8,7 +8,11 @@ import PlanForm from '../PlanForm/PlanForm'
 import Payment from '../Payment/Payment'
 import Creditoption from '../Creditoption/Creditoption'
 import BrowserHome from '../Browser/BrowserHome/BrowserHome'
+import MyList from '../Browser/BrowserBody/MyList'
 import { Routes, Route } from 'react-router-dom'
+import TVSeries from '../Browser/BrowserBody/TVSeries';
+import Movies from '../Browser/BrowserBody/Movies';
+import NewPopular from '../Browser/BrowserBody/NewPopular'
 
 
 
@@ -25,6 +29,11 @@ function App() {
         <Route path='/signup/planform' element={<PlanForm />} />
         <Route path='/signup/creditoption' element={<Creditoption />} />
         <Route path='/browser' element={<BrowserHome />} />
+        <Route path='/home' element={<BrowserHome />} />
+        <Route path='/tvseries' element={<TVSeries />} />
+        <Route path='/movies' element={<Movies />} />
+        <Route path='/new&popular' element={<NewPopular />} />
+        <Route path='/mylist' element={<MyList />} />
       </Routes>
     </div>
   );

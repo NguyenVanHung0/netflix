@@ -1,23 +1,36 @@
 import './Regform.css'
-import { Link } from 'react-router-dom'
-import { useState, useRef, useEffect } from 'react'
 import { connect } from 'react-redux'
-import { FaGlobe, FaAngleDown } from 'react-icons/fa'
 import withRouter from '../../router/withRouter'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-
-
+import { useState, useEffect, useRef } from 'react'
 
 
 function Regform(props) {
     let isVietNam = props.language == 'vietnam'
+    const [email, setEmail] = useState('')
+    const passInput = useRef()
 
 
     function handleClickNext() {
-        const navigate = props.router.navigate;
-        navigate('/signup')
+        if (passInput.current.value != '') {
+            if (passInput.current.value.length > 6) {
+                props.setPassword(passInput.current.value)
+                const navigate = props.router.navigate;
+                navigate('/signup')
+            }
+            else {
+                alert('Password must be at least 6 characters')
+            }
+        }
+        else {
+            alert('Invalid password')
+        }
     }
+
+    useEffect(() => {
+        setEmail(props.email)
+    }, [props.email])
 
     return (
         <div className='regform'>
@@ -26,22 +39,22 @@ function Regform(props) {
                 <div className='regform__body-box'>
                     <div className='regform__body-form registration__body-box'>
                         <div className='reg__body-form-header'>
-                            <span className='reg__body-form-header-step'>BƯỚC <b>1</b>/<b>3</b></span>
-                            <h3>Tạo mật khẩu để bắt đầu tư cách thành viên của bạn</h3>
-                            <p>Chỉ cần vài bước nữa là bạn sẽ hoàn tất!</p>
-                            <p>Chúng tôi cũng chẳng thích thú gì với các loại giấy tờ.</p>
+                            <span className='reg__body-form-header-step'>{isVietNam ? 'BƯỚC' : 'STEP'} <b>1</b>/<b>3</b></span>
+                            <h3>{isVietNam ? 'Tạo mật khẩu để bắt đầu tư cách thành viên của bạn' : 'Create a password to start your membership'}</h3>
+                            <p>{isVietNam ? 'Chỉ cần vài bước nữa là bạn sẽ hoàn tất!' : 'Just a few more steps and you\'re done!'}</p>
+                            <p>{isVietNam ? 'Chúng tôi cũng chẳng thích thú gì với các loại giấy tờ.' : 'We hate paperwork, too.'}</p>
                         </div>
                         <div className='reg__body-form-input'>
-                            <input className='reg__body-form-input-box' type='email'></input>
-                            <input className='reg__body-form-input-box' type='pasword' placeholder='Thêm mật khẩu'></input>
+                            <input className='reg__body-form-input-box' type='email' value={email} readOnly></input>
+                            <input ref={passInput} className='reg__body-form-input-box' type='password' placeholder={isVietNam ? 'Thêm mật khẩu' : 'Add a password'}></input>
                             <div className='reg__body-form-input-send-email'>
                                 <input className='reg__body-form-input-checkbox' type='checkbox' id='regform-checkbox' />
-                                <label htmlFor='regform-checkbox'>Vui lòng không gửi các ưu đãi đặc biệt của Netflix qua email cho tôi.</label>
+                                <label htmlFor='regform-checkbox'>{isVietNam ? 'Vui lòng không gửi các ưu đãi đặc biệt của Netflix qua email cho tôi.' : 'Please do not email me Netflix special offers.'}</label>
                             </div>
                         </div>
                         <div className='reg__body-form-btn'>
                             <div className='registration__body-btn reg__body-form-btn-btn'>
-                                <button onClick={handleClickNext}>Tiếp theo</button>
+                                <button onClick={handleClickNext}>{isVietNam ? 'Tiếp theo' : 'Next'}</button>
                             </div>
                         </div>
                     </div>
@@ -53,13 +66,20 @@ function Regform(props) {
 }
 
 const mapStateToProps = (state) => {
-    return { language: state.language }
+    return {
+        language: state.language,
+        email: state.email,
+        password: state.password
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language })
+        setPassword: (pass) => dispatch({ type: 'SET_PASS', payload: pass })
     }
 }
+
+
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Regform))

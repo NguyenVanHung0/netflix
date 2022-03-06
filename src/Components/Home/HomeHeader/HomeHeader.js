@@ -31,9 +31,11 @@ function useOutsideAlerter(ref, setAppear) {
 function HomeHeader(props) {
     const [appear, setAppear] = useState(false)
     const homeLanguage = useRef()
+    const inputElement = useRef()
     let isVietNam = props.language == 'vietnam'
     useOutsideAlerter(homeLanguage, setAppear);
-    function handleAppear() {
+
+    const handleAppear = () => {
         setAppear(!appear)
         if (homeLanguage.current && appear === false) {
             homeLanguage.current.style.borderRadius = '4px'
@@ -43,20 +45,36 @@ function HomeHeader(props) {
         }
     }
 
-    function handleChangeEnglish() {
-        let language = 'english'
+    function handleChangeLanguage(language) {
         props.changeLanguage(language);
     }
 
-    function handleChangeVietNam() {
-        let language = 'vietnam'
-        props.changeLanguage(language);
+    function validateEmail(emailAdress) {
+        let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (emailAdress.match(regexEmail)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     function handleClickGetStart() {
-        const navigate = props.router.navigate;
-        navigate('/signup/registration')
+        if (inputElement.current.value != '') {
+            if (validateEmail(inputElement.current.value)) {
+                const email = inputElement.current.value;
+                props.setEmail(email)
+                const navigate = props.router.navigate;
+                navigate('/signup/registration')
+            }
+            else {
+                alert('not an email')
+            }
+        }
+        else {
+            alert('invalid email')
+        }
     }
+
 
     return (
         <div className="home">
@@ -76,11 +94,11 @@ function HomeHeader(props) {
                 <div className='home__language-login'>
                     <div className='home__language' ref={homeLanguage} onClick={handleAppear} >
                         <FaGlobe />
-                        <p className='home__language-text'>Tiếng Việt</p>
+                        <p className='home__language-text'>{isVietNam ? 'Tiếng Việt' : 'English'}</p>
                         <FaAngleDown className='home-icon-down' />
                         {appear && <ul className='language-list language-position'>
-                            <li className='language__item' onClick={handleChangeVietNam}>Tiếng Việt</li>
-                            <li className='language__item' onClick={handleChangeEnglish}>English</li>
+                            <li className='language__item' onClick={() => handleChangeLanguage('vietnam')}>Tiếng Việt</li>
+                            <li className='language__item' onClick={() => handleChangeLanguage('english')}>English</li>
                         </ul>
                         }
 
@@ -92,12 +110,12 @@ function HomeHeader(props) {
                     </Link>
                 </div>
             </div>
-            <div className='home__content'>
+            <div className='home__content' id='signin'>
                 <h2 className='home__content-heading'>{isVietNam ? 'Chương trình truyền hình, phim không giới hạn và nhiều nội dung khác.' : 'Unlimited movies, TV shows, and more.'}</h2>
                 <p className='home__content-description'>{isVietNam ? 'Xem ở mọi nơi. Hủy bất kỳ lúc nào.' : 'Watch anywhere. Cancel anytime.'}</p>
                 <p className='home__content-text'>{isVietNam ? 'Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.' : 'Ready to watch? Enter your email to create or restart your membership.'}</p>
                 <div className='home__content-input'>
-                    <input className='home__content-boxinput' type='email' placeholder={isVietNam ? 'Địa chỉ email' : 'Email address'} />
+                    <input ref={inputElement} className='home__content-boxinput' type='text' placeholder={isVietNam ? 'Địa chỉ email' : 'Email address'} />
                     <div className='home__content-boxbtn'>
                         <span onClick={handleClickGetStart}>{isVietNam ? 'Bắt đầu' : 'Get Started'}</span>
                         <FaAngleRight className='home__icon-right' />
@@ -109,12 +127,16 @@ function HomeHeader(props) {
 }
 
 const mapStateToProps = (state) => {
-    return { language: state.language }
+    return {
+        language: state.language,
+        email: state.email
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language })
+        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language }),
+        setEmail: (email) => dispatch({ type: 'SET_EMAIL', payload: email })
     }
 }
 

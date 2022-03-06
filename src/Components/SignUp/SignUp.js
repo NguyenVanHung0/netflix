@@ -1,7 +1,5 @@
 import { connect } from 'react-redux'
-import { FaGlobe, FaAngleDown, FaRegCheckCircle } from 'react-icons/fa'
-import { useState, useRef, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { FaRegCheckCircle } from 'react-icons/fa'
 import './SignUp.css'
 import withRouter from '../../router/withRouter'
 import Header from '../Header/Header'
@@ -26,8 +24,8 @@ function SignUp(props) {
                             <FaRegCheckCircle className='signup__body-icon-icon' />
                         </div>
                         <div className='signup__body-header'>
-                            <p className='signup__body-header-step'>BƯỚC <b>1</b>/<b>3</b></p>
-                            <h3>Chọn gói dịch vụ của bạn.</h3>
+                            <p className='signup__body-header-step'>{isVietNam ? 'BƯỚC' : 'STEP'} <b>1</b>/<b>3</b></p>
+                            <h3>{isVietNam ? 'Chọn gói dịch vụ của bạn.' : 'Choose your plan.'}</h3>
                         </div>
                         <ul className='signup__body-list'>
                             <li className='signup__body-item'>
@@ -39,7 +37,7 @@ function SignUp(props) {
                                         fill="currentColor"
                                     ></path>
                                 </svg>
-                                Không yêu cầu cam kết, hủy bất kỳ lúc nào.
+                                {isVietNam ? 'Không yêu cầu cam kết, hủy bất kỳ lúc nào.' : 'No commitments, cancel anytime.'}
                             </li>
                             <li className='signup__body-item'>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="signup__body-item-icon">
@@ -50,7 +48,7 @@ function SignUp(props) {
                                         fill="currentColor"
                                     ></path>
                                 </svg>
-                                Mọi thứ trên Netflix chỉ với mức giá thấp.
+                                {isVietNam ? 'Mọi thứ trên Netflix chỉ với mức giá thấp.' : 'Everything on Netflix for one low price.'}
                             </li>
                             <li className='signup__body-item'>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="signup__body-item-icon">
@@ -61,11 +59,11 @@ function SignUp(props) {
                                         fill="currentColor"
                                     ></path>
                                 </svg>
-                                Không quảng cáo, không phụ phí. Luôn luôn như vậy.
+                                {isVietNam ? 'Không quảng cáo, không phụ phí. Luôn luôn như vậy.' : 'No ads and no extra fees. Ever.'}
                             </li>
                         </ul>
                         <div className='registration__body-btn signup__btn'>
-                            <button onClick={handleClickNext}>Tiếp theo</button>
+                            <button onClick={handleClickNext}>{isVietNam ? 'Tiếp theo' : 'Next'}</button>
                         </div>
                     </div>
                 </div>
@@ -79,10 +77,6 @@ const mapStateToProps = (state) => {
     return { language: state.language }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language })
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(SignUp))
+
+export default connect(mapStateToProps)(withRouter(SignUp))

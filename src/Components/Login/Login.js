@@ -3,6 +3,8 @@ import './Login.css'
 import logoface from '../../assets/img/logoface.png'
 import { Link } from 'react-router-dom'
 import { useState, useRef, useEffect } from 'react'
+import withRouter from '../../router/withRouter'
+import { connect } from 'react-redux'
 
 
 function useOutsideAlerter(ref, setAppear) {
@@ -28,21 +30,58 @@ function useOutsideAlerter(ref, setAppear) {
     }, [ref]);
 }
 
-function Login() {
+function Login(props) {
     const [appear, setAppear] = useState(false)
     const [servicesAppear, setServicesAppear] = useState(false)
+    const [accounts, setAccounts] = useState([])
     const homeLanguage = useRef()
+    const emailInput = useRef()
+    const passwordInput = useRef()
+    let isVietNam = props.language == 'vietnam'
 
     useOutsideAlerter(homeLanguage, setAppear);
-    function handleAppear() {
+
+    const handleAppear = () => {
         setAppear(!appear)
         if (homeLanguage.current && appear === false) {
-            console.log('hi')
             homeLanguage.current.style.borderRadius = '4px'
-            window.location.replace("http://www.w3schools.com");
         }
         else {
             homeLanguage.current.style.borderRadius = '2px'
+        }
+    }
+
+    useEffect(() => {
+        fetch('http://localhost:3000/account')
+            .then(res => res.json())
+            .then(acc => {
+                setAccounts(acc)
+            })
+    }, [])
+
+    const handleChangeLanguage = (language) => {
+        props.changeLanguage(language);
+    }
+
+    const handleClickSignIn = () => {
+        if (emailInput.current.value == '') {
+            alert('Invalid Email')
+        }
+        if (passwordInput.current.value == '') {
+            alert('Invalid Password')
+        }
+        if (passwordInput.current.value && emailInput.current.value) {
+            const isAcc = accounts.find((account, index) => {
+                return account.email == emailInput.current.value && account.passwordAcc == passwordInput.current.value
+            })
+
+            if (isAcc) {
+                const navigate = props.router.navigate
+                navigate('/browser')
+            }
+            else {
+                alert('Account does not exist')
+            }
         }
     }
 
@@ -50,7 +89,7 @@ function Login() {
         <div className="login">
             <div className='cover-layer'></div>
             <div className="login__header">
-                <Link to='/netflix/'>
+                <Link to='/'>
                     <svg viewBox="0 0 111 30" className='home__logo-img' >
                         <g>
                             <path
@@ -64,40 +103,40 @@ function Login() {
             </div>
             <div className="login__body">
                 <form className="login__form">
-                    <h3 className='login__form-heading'>Đăng nhập</h3>
+                    <h3 className='login__form-heading'>{isVietNam ? 'Đăng nhập' : 'Sign In'}</h3>
                     <div className='login__form-input'>
-                        <input type="text" placeholder='Email hoặc số điện thoại' className='login__form-input-box' />
-                        <input type="password" placeholder='Mật khẩu' className='login__form-input-box' />
+                        <input ref={emailInput} type="text" placeholder={isVietNam ? 'Email hoặc số điện thoại' : 'Email or phone number'} className='login__form-input-box' />
+                        <input ref={passwordInput} type="password" placeholder={isVietNam ? 'Mật khẩu' : 'Password'} className='login__form-input-box' />
                     </div>
                     <div className='login__form-submit'>
-                        <button className='login__form-submit-btn'>Đăng nhập</button>
+                        <button onClick={handleClickSignIn} className='login__form-submit-btn'>{isVietNam ? 'Đăng nhập' : 'Sign In'}</button>
                         <div className='login__form-submit-help'>
                             <div className='login__form-submit-checkbox'>
                                 <input type="checkbox" id='password-memory' />
-                                <label htmlFor='password-memory'>Ghi nhớ tôi</label>
+                                <label htmlFor='password-memory'>{isVietNam ? 'Ghi nhớ tôi' : 'Remember me'}</label>
                             </div>
-                            <span>Bạn cần trợ giúp?</span>
+                            <span>{isVietNam ? 'Bạn cần trợ giúp?' : 'Need help?'}</span>
                         </div>
                     </div>
                     <div className='login__form-footer'>
                         <div className='login__form-login-with-face'>
                             <img className='login__form-login-with-face-img' src={logoface} />
-                            Đăng nhập bằng tài khoản Facebook
+                            {isVietNam ? 'Đăng nhập bằng tài khoản Facebook' : 'Login With Facebook'}
                         </div>
                         <div className='login__form-register'>
-                            Bạn mới tham gia Netflix?
-                            <Link to='/'>Đăng kí ngay</Link>
+                            {isVietNam ? 'Bạn mới tham gia Netflix?' : 'New to Netflix?'}
+                            <Link to='/'>{isVietNam ? 'Đăng kí ngay' : 'Sign up now'}</Link>
                         </div>
                         <div className='login__form-more-inf'>
-                            Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải là robot.
-                            <span onClick={() => setServicesAppear(!servicesAppear)}>Tìm hiểu thêm</span>
+                            {isVietNam ? 'Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải là robot.' : 'This page is protected by Google reCAPTCHA to ensure you\'re not a bot.'}
+                            <span onClick={() => setServicesAppear(!servicesAppear)}>{isVietNam ? 'Tìm hiểu thêm' : 'Learn more.'}</span>
                         </div>
                         {servicesAppear &&
                             <div className='rules-services'>
-                                Thông tin do Google reCAPTCHA thu thập sẽ tuân theo
-                                <Link to=''> Chính sách Quyền riêng tư </Link> and
-                                <Link to=''> Điều khoản dịch vụ </Link>
-                                của Google, và được dùng để cung cấp, duy trì và cải thiện dịch vụ reCAPTCHA cũng như các mục đích bảo mật nói chung (thông tin này không được dùng để cá nhân hóa quảng cáo của Google).
+                                {isVietNam ? 'Thông tin do Google reCAPTCHA thu thập sẽ tuân theo' : 'The information collected by Google reCAPTCHA is subject to the Google'}
+                                <a href='https://help.netflix.com/legal/privacy'> {isVietNam ? 'Chính sách Quyền riêng tư' : 'Privacy Policy'} </a> and
+                                <a href='https://help.netflix.com/legal/termsofuse'> {isVietNam ? 'Điều khoản dịch vụ' : 'Terms of Service'} </a>
+                                {isVietNam ? 'của Google, và được dùng để cung cấp, duy trì và cải thiện dịch vụ reCAPTCHA cũng như các mục đích bảo mật nói chung (thông tin này không được dùng để cá nhân hóa quảng cáo của Google).' : ', and is used for providing, maintaining, and improving the reCAPTCHA service and for general security purposes (it is not used for personalized advertising by Google).'}
                             </div>
                         }
 
@@ -106,34 +145,16 @@ function Login() {
             </div>
             <div className="login__footer">
                 <div className='footer__header'>
-                    <a href=''>Bạn có câu hỏi? Liên hệ với chúng tôi.</a>
+                    <a href='https://help.netflix.com/vi/contactus'>{isVietNam ? 'Bạn có câu hỏi? Liên hệ với chúng tôi.' : 'Questions? Contact us.'}</a>
                 </div>
                 <div className='footer__content'>
                     <div className='footer__item'>
                         <ul className='footer__list'>
                             <li className='footer__list-item'>
-                                <a href='' className='footer__list-item-link'>Câu hỏi thường gặp</a>
+                                <a href='https://help.netflix.com/vi/node/412' className='footer__list-item-link'>{isVietNam ? 'Câu hỏi thường gặp' : 'FAQ'}</a>
                             </li>
                             <li className='footer__list-item'>
-                                <a href='' className='footer__list-item-link'>Tùy chọn cookie</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                    <div className='footer__item'>
-                        <ul className='footer__list'>
-                            <li className='footer__list-item'>
-                                <a href='' className='footer__list-item-link'>Trung tâm trợ giúp</a>
-                            </li>
-                            <li className='footer__list-item'>
-                                <a href='' className='footer__list-item-link'>Thông tin doanh nghiệp</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className='footer__item'>
-                        <ul className='footer__list'>
-                            <li className='footer__list-item'>
-                                <a href='' className='footer__list-item-link'>Điều khoản sử dụng</a>
+                                <a href='' className='footer__list-item-link'>{isVietNam ? 'Tùy chọn cookie' : 'Investor Relations'}</a>
                             </li>
 
                         </ul>
@@ -141,25 +162,43 @@ function Login() {
                     <div className='footer__item'>
                         <ul className='footer__list'>
                             <li className='footer__list-item'>
-                                <a href='' className='footer__list-item-link'>Quyền riêng tư</a>
+                                <a href='https://help.netflix.com/vi/' className='footer__list-item-link'>{isVietNam ? 'Trung tâm trợ giúp' : 'Help Center'}</a>
+                            </li>
+                            <li className='footer__list-item'>
+                                <a href='https://help.netflix.com/legal/corpinfo' className='footer__list-item-link'>{isVietNam ? 'Thông tin doanh nghiệp' : 'Jobs'}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className='footer__item'>
+                        <ul className='footer__list'>
+                            <li className='footer__list-item'>
+                                <a href='https://help.netflix.com/legal/termsofuse' className='footer__list-item-link'>{isVietNam ? 'Điều khoản sử dụng' : 'Account'}</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div className='footer__item'>
+                        <ul className='footer__list'>
+                            <li className='footer__list-item'>
+                                <a href='https://help.netflix.com/legal/privacy' className='footer__list-item-link'>{isVietNam ? 'Quyền riêng tư' : 'Media Center'}</a>
                             </li>
 
                         </ul>
                     </div>
                 </div>
                 <div className='footer__language'>
-                    <div className='footer__language-selection'>
-                        <button className='footer__language-btn' ref={homeLanguage} onClick={handleAppear} >
+                    <div className='footer__language-selection' ref={homeLanguage}>
+                        <button className='footer__language-btn' onClick={handleAppear} >
                             <FaGlobe />
-                            <p className='footer__language-btn-text'>Tiếng Việt</p>
+                            <p className='footer__language-btn-text'>{isVietNam ? 'Tiếng Việt' : 'Language'}</p>
                             <FaAngleDown />
                         </button>
                         {appear && <ul className='language-list'>
-                            <li className='language__item active--language'>Tiếng Việt</li>
-                            <li className='language__item'>English</li>
+                            <li className='language__item' onClick={() => handleChangeLanguage('vietnam')}>Tiếng Việt</li>
+                            <li className='language__item' onClick={() => handleChangeLanguage('english')}>English</li>
                         </ul>
                         }
-                        <p className='footer__name-web'>Netflix Việt Nam</p>
+                        <p className='footer__name-web'>{isVietNam ? 'Netflix Việt Nam' : 'Netflix VietNam'}</p>
                     </div>
                 </div>
             </div>
@@ -167,4 +206,15 @@ function Login() {
     )
 }
 
-export default Login
+const mapStateToProps = (state) => {
+    return { language: state.language }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Login))
+

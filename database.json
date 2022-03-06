@@ -1,572 +1,654 @@
 {
-    "movies": [
-        {
-            "id": 1,
-            "img": "iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg",
-            "nameMovie": "Spider Man: No Way Home",
-            "Category": "trending",
-            "description": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man."
-        },
-        {
-            "id": 2,
-            "img": "6qkeXdIEwqOuOWuxsomwnin2RdD.jpg",
-            "nameMovie": "The King's Man",
-            "Category": "trending",
-            "description": "As a collection of history's worst tyrants and criminal masterminds gather to plot a war to wipe out millions, one man must race against time to stop them."
-        },
-        {
-            "id": 3,
-            "img": "k47JEUTQsSMN532HRg6RCzZKBdB.jpg",
-            "nameMovie": "Vikings: Valhalla",
-            "Category": "trending",
-            "description":"In this sequel to \"Vikings\", a hundred years have passed and a new generation of legendary heroes arises to forge its own destiny — and make history."
-        },
-        {
-            "id": 4,
-            "img": "usaZV7KB6Man9Rm9TyDAeQf7uVD.jpg",
-            "nameMovie": "Scream",
-            "Category": "trending",
-            "description":"Twenty-five years after a streak of brutal murders shocked the quiet town of Woodsboro, a new killer has donned the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town’s deadly past."
-        },
-        {
-            "id": 5,
-            "img": "aTSA5zMWlVFTYBIZxTCMbLkfOtb.jpg",
-            "nameMovie": "Texas Chainsaw Massacre",
-            "Category": "trending",
-            "description":"In this sequel, influencers looking to breathe new life into a Texas ghost town encounter Leatherface, an infamous killer who wears a mask of human skin."
-        },
-        {
-            "id": 6,
-            "img": "oKt4J3TFjWirVwBqoHyIvv5IImd.jpg",
-            "nameMovie": "Euforia",
-            "Category": "trending",
-            "description":"A group of high school students navigate love and friendships in a world of drugs, sex, trauma, and social media."
-        },
-        {
-            "id": 7,
-            "img": "33wnBK5NxvuKQv0Cxo3wMv0eR7F.jpg",
-            "nameMovie": "No Exit",
-            "Category": "trending",
-            "description":"Stranded at a rest stop in the mountains during a blizzard, a recovering addict discovers a kidnapped child hidden in a car belonging to one of the people inside the building which sets her on a terrifying struggle to identify who among them is the kidnapper."
-        },
-        {
-            "id": 8,
-            "img": "rvtdN5XkWAfGX6xDuPL6yYS2seK.jpg",
-            "nameMovie": "The Batman",
-            "Category": "trending",
-            "description":"In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler."
-        },
-        {
-            "id": 9,
-            "img": "exnFsbb9c3fDutTsgtJSWcDmZm0.jpg",
-            "nameMovie": "West Side Story",
-            "Category": "trending",
-            "description":"Two youngsters from rival New York City gangs fall in love, but tensions between their respective friends build toward tragedy."
-        },
-        {
-            "id": 10,
-            "img": "yuvFyfOAO2UB5YP0HKgu8imtJul.jpg",
-            "nameMovie": "Uncharted",
-            "Category": "trending",
-            "description":"A young street-smart, Nathan Drake and his wisecracking partner Victor “Sully” Sullivan embark on a dangerous pursuit of “the greatest treasure never found” while also tracking clues that may lead to Nathan’s long-lost brother."
-        },
-        {
-            "id": 11,
-            "img": "3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg",
-            "nameMovie": "Encanto",
-            "Category": "animation",
-            "description":"The tale of an extraordinary family, the Madrigals, who live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift from super strength to the power to heal—every child except one, Mirabel. But when she discovers that the magic surrounding the Encanto is in danger, Mirabel decides that she, the only ordinary Madrigal, might just be her exceptional family's last hope."
-        },
-        {
-            "id": 12,
-            "img": "jdLsmpqmP1wTdFUPtmxMnYgoifT.jpg",
-            "nameMovie": "House Of Gucci",
-            "Category": "trending",
-            "description":"When Patrizia Reggiani, an outsider from humble beginnings, marries into the Gucci family, her unbridled ambition begins to unravel the family legacy and triggers a reckless spiral of betrayal, decadence, revenge, and ultimately…murder."
-        },
-        {
-            "id": 13,
-            "img": "wMUPT99gw6IB9OVvC46rF8wHIRt.jpg",
-            "nameMovie": "Fistful Of Vengeance",
-            "Category": "trending",
-            "description":"When Patrizia Reggiani, an outsider from humble beginnings, marries into the Gucci family, her unbridled ambition begins to unravel the family legacy and triggers a reckless spiral of betrayal, decadence, revenge, and ultimately…murder."
-        },
-        {
-            "id": 14,
-            "img": "c6H7Z4u73ir3cIoCteuhJh7UCAR.jpg",
-            "nameMovie": "Eternals",
-            "Category": "trending",
-            "description":"The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants."
-        },
-        {
-            "id": 15,
-            "img": "hB4ibOHXm1Xl0IbuYVioktDGUWJ.jpg",
-            "nameMovie": "Licorice Pizza",
-            "Category": "trending",
-            "description":"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973."
-        },
-        {
-            "id": 16,
-            "img": "iBAtBLqCMON3NPIjyQ1wdMbpTAk.jpg",
-            "nameMovie": "Demon Slayer: Kimetsu No Yaiba",
-            "Category": "animation",
-            "description":"It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family."
-        },
-        {
-            "id": 17,
-            "img": "ctxm191q5o3axFzQsvNPlbKoSYv.jpg",
-            "nameMovie": "Peacemaker",
-            "Category": "trending",
-            "description":"The continuing story of Peacemaker – a compellingly vainglorious man who believes in peace at any cost, no matter how many people he has to kill to get it – in the aftermath of the events of “The Suicide Squad.”"
-        },
-        {
-            "id": 18,
-            "img": "yvKrycViRMQcIgdnjsM5JGNWU4Q.jpg",
-            "nameMovie": "Attack On Titan",
-            "Category": "trending",
-            "description":"Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind."
-        },
-        {
-            "id": 19,
-            "img": "ilty8eu65u6vCJpyMva9ele8Qtm.jpg",
-            "nameMovie": "Marry Me",
-            "Category": "trending",
-            "description":"Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she decides to marry Charlie, a stranger in the crowd, instead."
-        },
-        {
-            "id": 20,
-            "img": "8pgKccb5PfE1kWB9qqiXJem83VC.jpg",
-            "nameMovie": "The 355",
-            "Category": "trending",
-            "description":"A group of top female agents from American, British, Chinese, Columbian and German government agencies are drawn together to try and stop an organization from acquiring a deadly weapon to send the world into chaos."
-        },
-        {
-            "id": 21,
-            "img": "5hNcsnMkwU2LknLoru73c76el3z.jpg",
-            "nameMovie": "Dilwale Dulhania Le Jayenge",
-            "Category": "rated",
-            "description":"Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran has left for India to be married to her childhood fiancé. Raj leaves for India with a mission at his hands, to claim his lady love under the noses of her whole family. Thus begins a saga."
-        },
-        {
-            "id": 22,
-            "img": "wPU78OPN4BYEgWYdXyg0phMee64.jpg",
-            "nameMovie": "The ShawShank Redemption",
-            "Category": "rated",
-            "description":"Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope."
-        },
-        {
-            "id": 23,
-            "img": "rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg",
-            "nameMovie": "The Godfather",
-            "Category": "rated",
-            "description":"Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge."
-        },
-        {
-            "id": 24,
-            "img": "loRmRzQXZeqG78TqZuyvSlEQfZb.jpg",
-            "nameMovie": "Schindler's List",
-            "Category": "rated",
-            "description":"The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II."
-        },
-        {
-            "id": 25,
-            "img": "jtAI6OJIWLWiRItNSZoWjrsUtmi.jpg",
-            "nameMovie": "Gabriel's Inferno Part 2",
-            "Category": "rated",
-            "description":"Professor Gabriel Emerson finally learns the truth about Julia Mitchell's identity, but his realization comes a moment too late. Julia is done waiting for the well-respected Dante specialist to remember her and wants nothing more to do with him. Can Gabriel win back her heart before she finds love in another's arms?"
-        },
-        {
-            "id": 26,
-            "img": "poec6RqOKY9iSiIUmfyfPfiLtvB.jpg",
-            "nameMovie": "The Godfather Part 2",
-            "Category": "rated",
-            "description":"In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba."
-        },
-        {
-            "id": 27,
-            "img": "w2uGvCpMtvRqZg6waC1hvLyZoJa.jpg",
-            "nameMovie": "Gabriel's Inferno",
-            "Category": "rated",
-            "description":"An intriguing and sinful exploration of seduction, forbidden love, and redemption, Gabriel's Inferno is a captivating and wildly passionate tale of one man's escape from his own personal hell as he tries to earn the impossible--forgiveness and love."
-        },
-        {
-            "id": 28,
-            "img": "3RMLbSEXOn1CzLoNT7xFeLfdxhq.jpg",
-            "nameMovie": "Dou Kyu Sei-Classmates",
-            "Category": "rated",
-            "description":"Rihito Sajo, an honor student with a perfect score on the entrance exam and Hikaru Kusakabe, in a band and popular among girls, would have never crossed paths. Until one day they started talking at the practice for their school’s upcoming chorus festival. After school, the two meet regularly, as Hikaru helps Rihito to improve his singing skills. While they listen to each other’s voice and harmonize, their hearts start to beat together."
-        },
-        {
-            "id": 29,
-            "img": "fQq1FWp1rC89xDrRMuyFJdFUdMd.jpg",
-            "nameMovie": "Gabriel's Inferno Part 3",
-            "Category": "rated",
-            "description":"The final part of the film adaption of the erotic romance novel Gabriel's Inferno written by an anonymous Canadian author under the pen name Sylvain Reynard."
-        },
-        {
-            "id": 30,
-            "img": "mMtUybQ6hL24FXo0F3Z4j2KG7kZ.jpg",
-            "nameMovie": "Your Name",
-            "Category": "rated",
-            "description":"High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence continues to happen randomly, and the two must adjust their lives around each other."
-        },
-        {
-            "id": 31,
-            "img": "hZth9NCeXvvO7Xi98d8q34e1Ier.jpg",
-            "nameMovie": "Spirited Away",
-            "Category": "rated",
-            "description":"A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family."
-        },
-        {
-            "id": 32,
-            "img": "TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
-            "nameMovie": "Parasite",
-            "Category": "rated",
-            "description":"All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident."
-        },
-        {
-            "id": 33,
-            "img": "1EAxNqdkVnp48a7NUuNBHGflowM.jpg",
-            "nameMovie": "Evangelion",
-            "Category": "rated",
-            "description":"In the aftermath of the Fourth Impact, stranded without their Evangelions, Shinji, Asuka, and Rei find refuge in one of the rare pockets of humanity that still exist on the ruined planet Earth. There, each of them live a life far different from their days as an Evangelion pilot. However, the danger to the world is far from over. A new impact is looming on the horizon—one that will prove to be the true end of Evangelion."
-        },
-        {
-            "id": 34,
-            "img": "qqHQsStV6exghCM7zbObuYBiYxw.jpg",
-            "nameMovie": "12 Angry Man",
-            "Category": "rated",
-            "description":"The defense and the prosecution have rested and the jury is filing into the jury room to decide if a young Spanish-American is guilty or innocent of murdering his father. What begins as an open and shut case soon becomes a mini-drama of each of the jurors' prejudices and preconceptions about the trial, the accused, and each other."
-        },
-        {
-            "id": 35,
-            "img": "l6hQWH9eDksNJNiXWYRkWqikOdu.jpg",
-            "nameMovie": "The Green Mile",
-            "Category": "rated",
-            "description":"A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people's ailments. When the cell block's head guard, Paul Edgecomb, recognizes Coffey's miraculous gift, he tries desperately to help stave off the condemned man's execution."
-        },
-        {
-            "id": 36,
-            "img": "nMKdUUepR0i5zn0y1T4CsSB5chy.jpg",
-            "nameMovie": "The Dark Knight",
-            "Category": "rated",
-            "description":"Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker."
-        },
-        {
-            "id": 37,
-            "img": "suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
-            "nameMovie": "Pulp Fiction",
-            "Category": "rated",
-            "description":"A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time."
-        },
-        {
-            "id": 38,
-            "img": "lXhgCODAbBXL5buk9yEmTpOoOgR.jpg",
-            "nameMovie": "The Lord Of The Rings: The Return Of The King",
-            "Category": "rated",
-            "description":"Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam take the ring closer to the heart of Mordor, the dark lord's realm."
-        },
-        {
-            "id": 39,
-            "img": "x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
-            "nameMovie": "The Good, The Bad and The Ugly",
-            "Category": "rated",
-            "description":"While the Civil War rages between the Union and the Confederacy, three men – a quiet loner, a ruthless hit man and a Mexican bandit – comb the American Southwest in search of a strongbox containing $200,000 in stolen gold."
-        },
-        {
-            "id": 40,
-            "img": "qdIMHd4sEfJSckfVJfKQvisL02a.jpg",
-            "nameMovie": "Forrost Gump",
-            "Category": "rated",
-            "description":"A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him."
-        },
-        {
-            "id": 41,
-            "img": "ze4lhw0oLBHYmlM2KuZjBg0Sq6H.jpg",
-            "nameMovie": "All Of Us Are Dead",
-            "Category": "originals",
-            "description":"A high school becomes ground zero for a zombie virus outbreak. Trapped students must fight their way out — or turn into one of the rabid infected."
-        },
-        {
-            "id": 42,
-            "img": "ekZobS8isE6mA53RAiGDG93hBxL.jpg",
-            "nameMovie": "Lucifer",
-            "Category": "originals",
-            "description":"Bored and unhappy as the Lord of Hell, Lucifer Morningstar abandoned his throne and retired to Los Angeles, where he has teamed up with LAPD detective Chloe Decker to take down criminals. But the longer he's away from the underworld, the greater the threat that the worst of humanity could escape."
-        },
-        {
-            "id": 42,
-            "img": "jzCnl9wACp0eUMa3IG5e0aSJIXD.jpg",
-            "nameMovie": "Inventing Anna",
-            "Category": "originals",
-            "description": "A journalist with a lot to prove investigates the case of Anna Delvey, the Instagram-legendary German heiress who stole the hearts of New York’s social scene – and stole their money as well."
-        },
-        {
-            "id": 43,
-            "img": "uxFNAo2A6ZRcgNASLk02hJUbybn.jpg",
-            "nameMovie": "Dark Desire",
-            "Category": "originals",
-            "description":"Married Alma spends a fateful weekend away from home that ignites passion, ends in tragedy and leads her to question the truth about those close to her."
-        },
-        {
-            "id": 44,
-            "img": "l6nGUyxKCi7ODvyfc8qQShliVEd.jpg",
-            "nameMovie": "The Cuphead Show",
-            "Category": "originals",
-            "description": "Follow the misadventures of the impulsive Cuphead and his cautious but persuadable brother Mugman in this animated series based on the hit video game."
-        },
-        {
-            "id": 45,
-            "img": "dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg",
-            "nameMovie": "Squid Game",
-            "Category": "originals",
-            "description":"Hundreds of cash-strapped players accept a strange invitation to compete in children's games—with high stakes. But, a tempting prize awaits the victor."
-        },
-        {
-            "id": 46,
-            "img": "6POBWybSBDBKjSs1VAQcnQC1qyt.jpg",
-            "nameMovie": "Cobra Kai",
-            "Category": "originals",
-            "description":"This Karate Kid sequel series picks up 30 years after the events of the 1984 All Valley Karate Tournament and finds Johnny Lawrence on the hunt for redemption by reopening the infamous Cobra Kai karate dojo. This reignites his old rivalry with the successful Daniel LaRusso, who has been working to maintain the balance in his life without mentor Mr. Miyagi."
-        },
-        {
-            "id": 47,
-            "img": "l1jeSEm6a88GFcLzlHQr60D0dOi.jpg",
-            "nameMovie": "Archive 81",
-            "Category": "originals",
-            "description":"An archivist takes a job restoring damaged videotapes and gets pulled into the vortex of a mystery involving the missing director and a demonic cult."
-        },
-        {
-            "id": 48,
-            "img": "izIMqapegdEZj0YVDyFATPR8adh.jpg",
-            "nameMovie": "Vikings: Valhalla",
-            "Category": "originals",
-            "description":"In this sequel to \"Vikings\", a hundred years have passed and a new generation of legendary heroes arises to forge its own destiny — and make history."
-        },
-        {
-            "id": 49,
-            "img": "iYoMZYVD775MtBYJfv6OGY1FsnL.jpg",
-            "nameMovie": "Midnight Mass",
-            "Category": "originals",
-            "description":"An unsettling omen washes ashore in the wake of the storm. Later, when the locals gather for a potluck, tragedy strikes – and a miracle occurs."
-        },
-        {
-            "id": 50,
-            "img": "8j12tohv1NBZNmpU93f47sAKBbw.jpg",
-            "nameMovie": "Sex Education",
-            "Category": "originals",
-            "description":"Inexperienced Otis channels his sex therapist mom when he teams up with rebellious Maeve to set up an underground sex therapy clinic at school."
-        },
-        {
-            "id": 51,
-            "img": "reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
-            "nameMovie": "Money Heist",
-            "Category": "originals",
-            "description":"To carry out the biggest heist in history, a mysterious man called The Professor recruits a band of eight robbers who have a single characteristic: none of them has anything to lose. Five months of seclusion - memorizing every step, every detail, every probability - culminate in eleven days locked up in the National Coinage and Stamp Factory of Spain, surrounded by police forces and with dozens of hostages in their power, to find out whether their suicide wager will lead to everything or nothing."
-        },
-        {
-            "id": 52,
-            "img": "fFT0IgqtCOks4munDTxQwkvNJkd.jpg",
-            "nameMovie": "The Silent Sea",
-            "Category": "originals",
-            "description":"During a perilous 24-hour mission on the moon, space explorers try to retrieve samples from an abandoned research facility steeped in classified secrets."
-        },
-        {
-            "id": 53,
-            "img": "x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
-            "nameMovie": "Stranger Things",
-            "Category": "originals",
-            "description":"When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
-        },
-        {
-            "id": 54,
-            "img": "5NYdSAnDVIXePrSG2dznHdiibMk.jpg",
-            "nameMovie": "Hellbound",
-            "Category": "originals",
-            "description":"Unearthly beings deliver bloody condemnations, sending individuals to hell and giving rise to a religious group founded on the idea of divine justice."
-        },
-        {
-            "id": 55,
-            "img": "3NTAbAiao4JLzFQw6YxP1YZppM8.jpg",
-            "nameMovie": "Elite",
-            "Category": "originals",
-            "description":"When three working class kids enroll in the most exclusive school in Spain, the clash between the wealthy and the poor students leads to tragedy."
-        },
-        {
-            "id": 56,
-            "img": "fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
-            "nameMovie": "Arcane",
-            "Category": "originals",
-            "description":"Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions."
-        },
-        
-        {
-            "id": 57,
-            "img": "jRlI5euugVZR6a1Ptt0nSWeiWH.jpg",
-            "nameMovie": "Rebelde",
-            "Category": "originals",
-            "description":"Head back to Elite Way School as a new generation of students hope to win the Battle of the Bands."
-        },
-        {
-            "id": 58,
-            "img": "7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
-            "nameMovie": "The Withcher",
-            "Category": "originals",
-            "description":"Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts."
-        },
-        {
-            "id": 59,
-            "img": "c79L7zCnRzDJerrlbIWkNCjA6tg.jpg",
-            "nameMovie": "BAKI",
-            "Category": "originals",
-            "description":"Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts."
-        },
-        {
-            "id": 60,
-            "img": "suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
-            "nameMovie": "Pulp Fiction",
-            "Category": "originals",
-            "description":"A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time."
-        },
-        {
-            "id": 61,
-            "img": "eG0oOQVsniPAuecPzDD1B1gnYWy.jpg",
-            "nameMovie": "The Ice Age Adventures Of Buck Wild",
-            "Category":"animation",
-            "description":"The fearless one-eyed weasel Buck teams up with mischievous possum brothers Crash & Eddie as they head off on a new adventure into Buck's home: The Dinosaur World."
-        },
-        {
-            "id": 62,
-            "img": "qBLEWvJNVsehJkEJqIigPsWyBse.jpg",
-            "nameMovie": "Hotel Transylvania: Transformania",
-            "Category":"animation",
-            "description":"When Van Helsing's mysterious invention, the \"Monsterfication Ray,\" goes haywire, Drac and his monster pals are all transformed into humans, and Johnny becomes a monster. In their new mismatched bodies, Drac and Johnny must team up and race across the globe to find a cure before it's too late, and before they drive each other crazy."
-        },
-        {
-            "id": 63,
-            "img": "cugmVwK0N4aAcLibelKN5jWDXSx.jpg",
-            "nameMovie": "My Hero Academia: World Heroes' Mission",
-            "Category":"animation",
-            "description":"A mysterious group called Humarize strongly believes in the Quirk Singularity Doomsday theory which states that when quirks get mixed further in with future generations, that power will bring forth the end of humanity. In order to save everyone, the Pro-Heroes around the world ask UA Academy heroes-in-training to assist them and form a world-classic selected hero team. It is up to the heroes to save the world and the future of heroes in what is the most dangerous crisis to take place yet in My Hero Academia."
-        },
-        {
-            "id": 64,
-            "img": "tutaKitJJIaqZPyMz7rxrhb4Yxm.jpg",
-            "nameMovie": "Sing 2",
-            "Category":"animation",
-            "description":"Buster and his new cast now have their sights set on debuting a new show at the Crystal Tower Theater in glamorous Redshore City. But with no connections, he and his singers must sneak into the Crystal Entertainment offices, run by the ruthless wolf mogul Jimmy Crystal, where the gang pitches the ridiculous idea of casting the lion rock legend Clay Calloway in their show. Buster must embark on a quest to find the now-isolated Clay and persuade him to return to the stage."
-        },
-        {
-            "id": 65,
-            "img": "xPpXYnCWfjkt3zzE0dpCNME1pXF.jpg",
-            "nameMovie": "Demon Slayer-Kimetsu No Yaiba. The Movie: Mugen Train",
-            "Category":"animation",
-            "description":"Tanjirō Kamado, joined with Inosuke Hashibira, a boy raised by boars who wears a boar's head, and Zenitsu Agatsuma, a scared boy who reveals his true power when he sleeps, boards the Infinity Train on a new mission with the Fire Hashira, Kyōjurō Rengoku, to defeat a demon who has been tormenting the people and killing the demon slayers who oppose it!"
-        },
-        {
-            "id": 66,
-            "img": "hk4PwhKhT7q7jp1lvA8aiYqDluy.jpg",
-            "nameMovie": "The House",
-            "Category":"animation",
-            "description":"Across different eras, a poor family, an anxious developer and a fed-up landlady become tied to the same mysterious house in this animated dark comedy."
-        },
-        {
-            "id": 67,
-            "img": "q1NXVYTqSStNQsnKrCvtU6NPzEk.jpg",
-            "nameMovie": "Tom And Jerry: Cowboy Up!",
-            "Category":"animation",
-            "description":"This time, the rivals team up to help a cowgirl and her brother save their homestead from a greedy land-grabber, and they’re going to need some help! Jerry’s three precocious nephews are all ready for action, and Tom is rounding up a posse of prairie dogs. But can a ragtag band of varmints defeat a deceitful desperado determined to deceive a damsel in distress? No matter what happens with Tom and Jerry in the saddle, it’ll be a rootin’ tootin’ good time!"
-        },
-        {
-            "id": 68,
-            "img": "sdL37sfUBth7mdkAolI83bXAl7L.jpg",
-            "nameMovie": "Ron's Gone Wrong",
-            "Category":"animation",
-            "description":"In a world where walking, talking, digitally connected bots have become children's best friends, an 11-year-old finds that his robot buddy doesn't quite work the same as the others do."
-        },
-        {
-            "id": 69,
-            "img": "vkjsoMF86dJIv6Sgtd4CcuR8kzh.jpg",
-            "nameMovie": "The Seven Deadly Sins: Cursed By Light",
-            "Category":"animation",
-            "description":"With the help of the \"Dragon Sin of Wrath\" Meliodas and the worst rebels in history, the Seven Deadly Sins, the \"Holy War\", in which four races, including Humans, Goddesses, Fairies and Giants fought against the Demons, is finally over. At the cost of the \"Lion Sin of Pride\" Escanor's life, the Demon King was defeated and the world regained peace. After that, each of the Sins take their own path."
-        },
-        {
-            "id": 70,
-            "img": "pxOiKwRvNp3zFOiuwpYpzlbmEgC.jpg",
-            "nameMovie": "The Boss Baby: Family Business",
-            "Category":"animation",
-            "description":"The Templeton brothers — Tim and his Boss Baby little bro Ted — have become adults and drifted away from each other. But a new boss baby with a cutting-edge approach and a can-do attitude is about to bring them together again … and inspire a new family business."
-        },
-        {
-            "id": 71,
-            "img": "1zgob2Z8xVE3RZUgOKnHKcVPzOE.jpg",
-            "nameMovie": "The Simpsons In Plusaversary",
-            "Category":"animation",
-            "description":"The Simpsons host a Disney+ Day party and everyone is on the list… except Homer. With friends from across the service and music fit for a Disney Princess, Plusaversary is Springfield's event of the year."
-        },
-        {
-            "id": 72,
-            "img": "620hnMVLu6RSZW6a5rwO8gqpt0t.jpg",
-            "nameMovie": "Luca",
-            "Category":"animation",
-            "description":"Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface."
-        },
-        {
-            "id": 73,
-            "img": "a17F3zXnmuwqxfiDa46mtlosjrv.jpg",
-            "nameMovie": "PAW Patrol: The Movie",
-            "Category":"animation",
-            "description":"Ryder and the pups are called to Adventure City to stop Mayor Humdinger from turning the bustling metropolis into a state of chaos."
-        },
-        {
-            "id": 74,
-            "img": "x78cvxbmpBNcHON7x3Iv8vih5Sj.jpg",
-            "nameMovie": "Diary Of A Wimby Kid",
-            "Category":"animation",
-            "description":"Greg Heffley is a scrawny but ambitious kid with an active imagination and big plans to be rich and famous – he just has to survive middle school first."
-        },
-        {
-            "id": 75,
-            "img": "qqthj8EUL4QKlDBoMcPqeWvi6Ya.jpg",
-            "nameMovie": "Riverdance: The Animated Adventure",
-            "Category":"animation",
-            "description":"A young Irish boy named Keegan and Spanish girl named Moya journey into a magical world of the Megaloceros Giganteus who teach them to appreciate Riverdance as a celebration of life. Based on the stage show phenomenon of the same name and featuring Bill Whelan’s multi-platinum Grammy Award-winning music."
-        },
-        {
-            "id": 76,
-            "img": "iMFDOpE52wbT9GXYTvv4Em6QDhl.jpg",
-            "nameMovie": "Turning Red",
-            "Category":"animation",
-            "description":"Thirteen-year-old Mei is experiencing the awkwardness of being a teenager with a twist – when she gets too excited, she transforms into a giant red panda."
-        },
-        {
-            "id": 77,
-            "img": "5B22eed7ErxFiYAG4Ksb4eLwKNF.jpg",
-            "nameMovie": "Back To The Outback",
-            "Category":"animation",
-            "description":"Tired of being locked in a reptile house where humans gawk at them like they are monsters, a ragtag group of Australia’s deadliest creatures plot an escape from their zoo to the Outback, a place where they’ll fit in without being judged."
-        },
-        {
-            "id": 78,
-            "img": "mI0Qo7VtgW5siCtQQqNPXIk0Ar6.jpg",
-            "nameMovie": "Mobile Suit Gundam Hathaway",
-            "Category":"animation",
-            "description":"After Char's rebellion, Hathaway Noa leads an insurgency against Earth Federation, but meeting an enemy officer and a mysterious woman alters his fate."
-        },
-        {
-            "id": 79,
-            "img": "hdXQxlD4mep7qtC5TsvhIt840OV.jpg",
-            "nameMovie": "Deathstroke: Knights & Dragons - The Movie",
-            "Category":"animation",
-            "description":"The assassin Deathstroke tries to save his family from the wrath of H.I.V.E. and the murderous Jackal."
-        },
-        {
-            "id": 80,
-            "img": "qqthj8EUL4QKlDBoMcPqeWvi6Ya.jpg",
-            "nameMovie": "Riverdance: The Animated Adventure",
-            "Category":"animation",
-            "description":"A young Irish boy named Keegan and Spanish girl named Moya journey into a magical world of the Megaloceros Giganteus who teach them to appreciate Riverdance as a celebration of life. Based on the stage show phenomenon of the same name and featuring Bill Whelan’s multi-platinum Grammy Award-winning music."
-        }
-    ]
+  "movies": [
+    {
+      "id": 1,
+      "img": "iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg",
+      "nameMovie": "Spider Man: No Way Home",
+      "category": "trending",
+      "description": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man."
+    },
+    {
+      "id": 2,
+      "img": "6qkeXdIEwqOuOWuxsomwnin2RdD.jpg",
+      "nameMovie": "The King's Man",
+      "category": "trending",
+      "description": "As a collection of history's worst tyrants and criminal masterminds gather to plot a war to wipe out millions, one man must race against time to stop them."
+    },
+    {
+      "id": 3,
+      "img": "k47JEUTQsSMN532HRg6RCzZKBdB.jpg",
+      "nameMovie": "Vikings: Valhalla",
+      "category": "trending",
+      "description": "In this sequel to \"Vikings\", a hundred years have passed and a new generation of legendary heroes arises to forge its own destiny — and make history."
+    },
+    {
+      "id": 4,
+      "img": "usaZV7KB6Man9Rm9TyDAeQf7uVD.jpg",
+      "nameMovie": "Scream",
+      "category": "trending",
+      "description": "Twenty-five years after a streak of brutal murders shocked the quiet town of Woodsboro, a new killer has donned the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town’s deadly past."
+    },
+    {
+      "id": 5,
+      "img": "aTSA5zMWlVFTYBIZxTCMbLkfOtb.jpg",
+      "nameMovie": "Texas Chainsaw Massacre",
+      "category": "trending",
+      "description": "In this sequel, influencers looking to breathe new life into a Texas ghost town encounter Leatherface, an infamous killer who wears a mask of human skin."
+    },
+    {
+      "id": 6,
+      "img": "oKt4J3TFjWirVwBqoHyIvv5IImd.jpg",
+      "nameMovie": "Euforia",
+      "category": "trending",
+      "description": "A group of high school students navigate love and friendships in a world of drugs, sex, trauma, and social media."
+    },
+    {
+      "id": 7,
+      "img": "33wnBK5NxvuKQv0Cxo3wMv0eR7F.jpg",
+      "nameMovie": "No Exit",
+      "category": "trending",
+      "description": "Stranded at a rest stop in the mountains during a blizzard, a recovering addict discovers a kidnapped child hidden in a car belonging to one of the people inside the building which sets her on a terrifying struggle to identify who among them is the kidnapper."
+    },
+    {
+      "id": 8,
+      "img": "rvtdN5XkWAfGX6xDuPL6yYS2seK.jpg",
+      "nameMovie": "The Batman",
+      "category": "trending",
+      "description": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler."
+    },
+    {
+      "id": 9,
+      "img": "exnFsbb9c3fDutTsgtJSWcDmZm0.jpg",
+      "nameMovie": "West Side Story",
+      "category": "trending",
+      "description": "Two youngsters from rival New York City gangs fall in love, but tensions between their respective friends build toward tragedy."
+    },
+    {
+      "id": 10,
+      "img": "yuvFyfOAO2UB5YP0HKgu8imtJul.jpg",
+      "nameMovie": "Uncharted",
+      "category": "trending",
+      "description": "A young street-smart, Nathan Drake and his wisecracking partner Victor “Sully” Sullivan embark on a dangerous pursuit of “the greatest treasure never found” while also tracking clues that may lead to Nathan’s long-lost brother."
+    },
+    {
+      "id": 11,
+      "img": "3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg",
+      "nameMovie": "Encanto",
+      "category": "animation",
+      "description": "The tale of an extraordinary family, the Madrigals, who live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift from super strength to the power to heal—every child except one, Mirabel. But when she discovers that the magic surrounding the Encanto is in danger, Mirabel decides that she, the only ordinary Madrigal, might just be her exceptional family's last hope."
+    },
+    {
+      "id": 12,
+      "img": "jdLsmpqmP1wTdFUPtmxMnYgoifT.jpg",
+      "nameMovie": "House Of Gucci",
+      "category": "trending",
+      "description": "When Patrizia Reggiani, an outsider from humble beginnings, marries into the Gucci family, her unbridled ambition begins to unravel the family legacy and triggers a reckless spiral of betrayal, decadence, revenge, and ultimately…murder."
+    },
+    {
+      "id": 13,
+      "img": "wMUPT99gw6IB9OVvC46rF8wHIRt.jpg",
+      "nameMovie": "Fistful Of Vengeance",
+      "category": "trending",
+      "description": "When Patrizia Reggiani, an outsider from humble beginnings, marries into the Gucci family, her unbridled ambition begins to unravel the family legacy and triggers a reckless spiral of betrayal, decadence, revenge, and ultimately…murder."
+    },
+    {
+      "id": 14,
+      "img": "c6H7Z4u73ir3cIoCteuhJh7UCAR.jpg",
+      "nameMovie": "Eternals",
+      "category": "trending",
+      "description": "The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants."
+    },
+    {
+      "id": 15,
+      "img": "hB4ibOHXm1Xl0IbuYVioktDGUWJ.jpg",
+      "nameMovie": "Licorice Pizza",
+      "category": "trending",
+      "description": "The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973."
+    },
+    {
+      "id": 16,
+      "img": "iBAtBLqCMON3NPIjyQ1wdMbpTAk.jpg",
+      "nameMovie": "Demon Slayer: Kimetsu No Yaiba",
+      "category": "animation",
+      "description": "It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family."
+    },
+    {
+      "id": 17,
+      "img": "ctxm191q5o3axFzQsvNPlbKoSYv.jpg",
+      "nameMovie": "Peacemaker",
+      "category": "trending",
+      "description": "The continuing story of Peacemaker – a compellingly vainglorious man who believes in peace at any cost, no matter how many people he has to kill to get it – in the aftermath of the events of “The Suicide Squad.”"
+    },
+    {
+      "id": 18,
+      "img": "yvKrycViRMQcIgdnjsM5JGNWU4Q.jpg",
+      "nameMovie": "Attack On Titan",
+      "category": "trending",
+      "description": "Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind."
+    },
+    {
+      "id": 19,
+      "img": "ilty8eu65u6vCJpyMva9ele8Qtm.jpg",
+      "nameMovie": "Marry Me",
+      "category": "trending",
+      "description": "Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she decides to marry Charlie, a stranger in the crowd, instead."
+    },
+    {
+      "id": 20,
+      "img": "8pgKccb5PfE1kWB9qqiXJem83VC.jpg",
+      "nameMovie": "The 355",
+      "category": "trending",
+      "description": "A group of top female agents from American, British, Chinese, Columbian and German government agencies are drawn together to try and stop an organization from acquiring a deadly weapon to send the world into chaos."
+    },
+    {
+      "id": 21,
+      "img": "5hNcsnMkwU2LknLoru73c76el3z.jpg",
+      "nameMovie": "Dilwale Dulhania Le Jayenge",
+      "category": "rated",
+      "description": "Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran has left for India to be married to her childhood fiancé. Raj leaves for India with a mission at his hands, to claim his lady love under the noses of her whole family. Thus begins a saga."
+    },
+    {
+      "id": 22,
+      "img": "wPU78OPN4BYEgWYdXyg0phMee64.jpg",
+      "nameMovie": "The ShawShank Redemption",
+      "category": "rated",
+      "description": "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope."
+    },
+    {
+      "id": 23,
+      "img": "rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg",
+      "nameMovie": "The Godfather",
+      "category": "rated",
+      "description": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge."
+    },
+    {
+      "id": 24,
+      "img": "loRmRzQXZeqG78TqZuyvSlEQfZb.jpg",
+      "nameMovie": "Schindler's List",
+      "category": "rated",
+      "description": "The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II."
+    },
+    {
+      "id": 25,
+      "img": "jtAI6OJIWLWiRItNSZoWjrsUtmi.jpg",
+      "nameMovie": "Gabriel's Inferno Part 2",
+      "category": "rated",
+      "description": "Professor Gabriel Emerson finally learns the truth about Julia Mitchell's identity, but his realization comes a moment too late. Julia is done waiting for the well-respected Dante specialist to remember her and wants nothing more to do with him. Can Gabriel win back her heart before she finds love in another's arms?"
+    },
+    {
+      "id": 26,
+      "img": "poec6RqOKY9iSiIUmfyfPfiLtvB.jpg",
+      "nameMovie": "The Godfather Part 2",
+      "category": "rated",
+      "description": "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba."
+    },
+    {
+      "id": 27,
+      "img": "w2uGvCpMtvRqZg6waC1hvLyZoJa.jpg",
+      "nameMovie": "Gabriel's Inferno",
+      "category": "rated",
+      "description": "An intriguing and sinful exploration of seduction, forbidden love, and redemption, Gabriel's Inferno is a captivating and wildly passionate tale of one man's escape from his own personal hell as he tries to earn the impossible--forgiveness and love."
+    },
+    {
+      "id": 28,
+      "img": "3RMLbSEXOn1CzLoNT7xFeLfdxhq.jpg",
+      "nameMovie": "Dou Kyu Sei-Classmates",
+      "category": "rated",
+      "description": "Rihito Sajo, an honor student with a perfect score on the entrance exam and Hikaru Kusakabe, in a band and popular among girls, would have never crossed paths. Until one day they started talking at the practice for their school’s upcoming chorus festival. After school, the two meet regularly, as Hikaru helps Rihito to improve his singing skills. While they listen to each other’s voice and harmonize, their hearts start to beat together."
+    },
+    {
+      "id": 29,
+      "img": "fQq1FWp1rC89xDrRMuyFJdFUdMd.jpg",
+      "nameMovie": "Gabriel's Inferno Part 3",
+      "category": "rated",
+      "description": "The final part of the film adaption of the erotic romance novel Gabriel's Inferno written by an anonymous Canadian author under the pen name Sylvain Reynard."
+    },
+    {
+      "id": 30,
+      "img": "mMtUybQ6hL24FXo0F3Z4j2KG7kZ.jpg",
+      "nameMovie": "Your Name",
+      "category": "rated",
+      "description": "High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence continues to happen randomly, and the two must adjust their lives around each other."
+    },
+    {
+      "id": 31,
+      "img": "hZth9NCeXvvO7Xi98d8q34e1Ier.jpg",
+      "nameMovie": "Spirited Away",
+      "category": "rated",
+      "description": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family."
+    },
+    {
+      "id": 32,
+      "img": "TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
+      "nameMovie": "Parasite",
+      "category": "rated",
+      "description": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident."
+    },
+    {
+      "id": 33,
+      "img": "1EAxNqdkVnp48a7NUuNBHGflowM.jpg",
+      "nameMovie": "Evangelion",
+      "category": "rated",
+      "description": "In the aftermath of the Fourth Impact, stranded without their Evangelions, Shinji, Asuka, and Rei find refuge in one of the rare pockets of humanity that still exist on the ruined planet Earth. There, each of them live a life far different from their days as an Evangelion pilot. However, the danger to the world is far from over. A new impact is looming on the horizon—one that will prove to be the true end of Evangelion."
+    },
+    {
+      "id": 34,
+      "img": "qqHQsStV6exghCM7zbObuYBiYxw.jpg",
+      "nameMovie": "12 Angry Man",
+      "category": "rated",
+      "description": "The defense and the prosecution have rested and the jury is filing into the jury room to decide if a young Spanish-American is guilty or innocent of murdering his father. What begins as an open and shut case soon becomes a mini-drama of each of the jurors' prejudices and preconceptions about the trial, the accused, and each other."
+    },
+    {
+      "id": 35,
+      "img": "l6hQWH9eDksNJNiXWYRkWqikOdu.jpg",
+      "nameMovie": "The Green Mile",
+      "category": "rated",
+      "description": "A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people's ailments. When the cell block's head guard, Paul Edgecomb, recognizes Coffey's miraculous gift, he tries desperately to help stave off the condemned man's execution."
+    },
+    {
+      "id": 36,
+      "img": "nMKdUUepR0i5zn0y1T4CsSB5chy.jpg",
+      "nameMovie": "The Dark Knight",
+      "category": "rated",
+      "description": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker."
+    },
+    {
+      "id": 37,
+      "img": "suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+      "nameMovie": "Pulp Fiction",
+      "category": "rated",
+      "description": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time."
+    },
+    {
+      "id": 38,
+      "img": "lXhgCODAbBXL5buk9yEmTpOoOgR.jpg",
+      "nameMovie": "The Lord Of The Rings: The Return Of The King",
+      "category": "rated",
+      "description": "Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam take the ring closer to the heart of Mordor, the dark lord's realm."
+    },
+    {
+      "id": 39,
+      "img": "x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
+      "nameMovie": "The Good, The Bad and The Ugly",
+      "category": "rated",
+      "description": "While the Civil War rages between the Union and the Confederacy, three men – a quiet loner, a ruthless hit man and a Mexican bandit – comb the American Southwest in search of a strongbox containing $200,000 in stolen gold."
+    },
+    {
+      "id": 40,
+      "img": "qdIMHd4sEfJSckfVJfKQvisL02a.jpg",
+      "nameMovie": "Forrost Gump",
+      "category": "rated",
+      "description": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him."
+    },
+    {
+      "id": 41,
+      "img": "ze4lhw0oLBHYmlM2KuZjBg0Sq6H.jpg",
+      "nameMovie": "All Of Us Are Dead",
+      "category": "originals",
+      "description": "A high school becomes ground zero for a zombie virus outbreak. Trapped students must fight their way out — or turn into one of the rabid infected."
+    },
+    {
+      "id": 42,
+      "img": "jzCnl9wACp0eUMa3IG5e0aSJIXD.jpg",
+      "nameMovie": "Inventing Anna",
+      "category": "originals",
+      "description": "A journalist with a lot to prove investigates the case of Anna Delvey, the Instagram-legendary German heiress who stole the hearts of New York’s social scene – and stole their money as well."
+    },
+    {
+      "id": 43,
+      "img": "uxFNAo2A6ZRcgNASLk02hJUbybn.jpg",
+      "nameMovie": "Dark Desire",
+      "category": "originals",
+      "description": "Married Alma spends a fateful weekend away from home that ignites passion, ends in tragedy and leads her to question the truth about those close to her."
+    },
+    {
+      "id": 44,
+      "img": "l6nGUyxKCi7ODvyfc8qQShliVEd.jpg",
+      "nameMovie": "The Cuphead Show",
+      "category": "originals",
+      "description": "Follow the misadventures of the impulsive Cuphead and his cautious but persuadable brother Mugman in this animated series based on the hit video game."
+    },
+    {
+      "id": 45,
+      "img": "dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg",
+      "nameMovie": "Squid Game",
+      "category": "originals",
+      "description": "Hundreds of cash-strapped players accept a strange invitation to compete in children's games—with high stakes. But, a tempting prize awaits the victor."
+    },
+    {
+      "id": 81,
+      "img": "ekZobS8isE6mA53RAiGDG93hBxL.jpg",
+      "nameMovie": "Lucifer",
+      "category": "originals",
+      "description": "Bored and unhappy as the Lord of Hell, Lucifer Morningstar abandoned his throne and retired to Los Angeles, where he has teamed up with LAPD detective Chloe Decker to take down criminals. But the longer he's away from the underworld, the greater the threat that the worst of humanity could escape."
+    },
+    {
+      "id": 46,
+      "img": "6POBWybSBDBKjSs1VAQcnQC1qyt.jpg",
+      "nameMovie": "Cobra Kai",
+      "category": "originals",
+      "description": "This Karate Kid sequel series picks up 30 years after the events of the 1984 All Valley Karate Tournament and finds Johnny Lawrence on the hunt for redemption by reopening the infamous Cobra Kai karate dojo. This reignites his old rivalry with the successful Daniel LaRusso, who has been working to maintain the balance in his life without mentor Mr. Miyagi."
+    },
+    {
+      "id": 47,
+      "img": "l1jeSEm6a88GFcLzlHQr60D0dOi.jpg",
+      "nameMovie": "Archive 81",
+      "category": "originals",
+      "description": "An archivist takes a job restoring damaged videotapes and gets pulled into the vortex of a mystery involving the missing director and a demonic cult."
+    },
+    {
+      "id": 48,
+      "img": "izIMqapegdEZj0YVDyFATPR8adh.jpg",
+      "nameMovie": "Vikings: Valhalla",
+      "category": "originals",
+      "description": "In this sequel to \"Vikings\", a hundred years have passed and a new generation of legendary heroes arises to forge its own destiny — and make history."
+    },
+    {
+      "id": 49,
+      "img": "iYoMZYVD775MtBYJfv6OGY1FsnL.jpg",
+      "nameMovie": "Midnight Mass",
+      "category": "originals",
+      "description": "An unsettling omen washes ashore in the wake of the storm. Later, when the locals gather for a potluck, tragedy strikes – and a miracle occurs."
+    },
+    {
+      "id": 50,
+      "img": "8j12tohv1NBZNmpU93f47sAKBbw.jpg",
+      "nameMovie": "Sex Education",
+      "category": "originals",
+      "description": "Inexperienced Otis channels his sex therapist mom when he teams up with rebellious Maeve to set up an underground sex therapy clinic at school."
+    },
+    {
+      "id": 51,
+      "img": "reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
+      "nameMovie": "Money Heist",
+      "category": "originals",
+      "description": "To carry out the biggest heist in history, a mysterious man called The Professor recruits a band of eight robbers who have a single characteristic: none of them has anything to lose. Five months of seclusion - memorizing every step, every detail, every probability - culminate in eleven days locked up in the National Coinage and Stamp Factory of Spain, surrounded by police forces and with dozens of hostages in their power, to find out whether their suicide wager will lead to everything or nothing."
+    },
+    {
+      "id": 52,
+      "img": "fFT0IgqtCOks4munDTxQwkvNJkd.jpg",
+      "nameMovie": "The Silent Sea",
+      "category": "originals",
+      "description": "During a perilous 24-hour mission on the moon, space explorers try to retrieve samples from an abandoned research facility steeped in classified secrets."
+    },
+    {
+      "id": 53,
+      "img": "x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
+      "nameMovie": "Stranger Things",
+      "category": "originals",
+      "description": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+    },
+    {
+      "id": 54,
+      "img": "5NYdSAnDVIXePrSG2dznHdiibMk.jpg",
+      "nameMovie": "Hellbound",
+      "category": "originals",
+      "description": "Unearthly beings deliver bloody condemnations, sending individuals to hell and giving rise to a religious group founded on the idea of divine justice."
+    },
+    {
+      "id": 55,
+      "img": "3NTAbAiao4JLzFQw6YxP1YZppM8.jpg",
+      "nameMovie": "Elite",
+      "category": "originals",
+      "description": "When three working class kids enroll in the most exclusive school in Spain, the clash between the wealthy and the poor students leads to tragedy."
+    },
+    {
+      "id": 56,
+      "img": "fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
+      "nameMovie": "Arcane",
+      "category": "originals",
+      "description": "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions."
+    },
+    {
+      "id": 57,
+      "img": "jRlI5euugVZR6a1Ptt0nSWeiWH.jpg",
+      "nameMovie": "Rebelde",
+      "category": "originals",
+      "description": "Head back to Elite Way School as a new generation of students hope to win the Battle of the Bands."
+    },
+    {
+      "id": 58,
+      "img": "7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
+      "nameMovie": "The Withcher",
+      "category": "originals",
+      "description": "Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts."
+    },
+    {
+      "id": 59,
+      "img": "c79L7zCnRzDJerrlbIWkNCjA6tg.jpg",
+      "nameMovie": "BAKI",
+      "category": "originals",
+      "description": "Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts."
+    },
+    {
+      "id": 60,
+      "img": "suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+      "nameMovie": "Pulp Fiction",
+      "category": "trending",
+      "description": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time."
+    },
+    {
+      "id": 61,
+      "img": "eG0oOQVsniPAuecPzDD1B1gnYWy.jpg",
+      "nameMovie": "The Ice Age Adventures Of Buck Wild",
+      "category": "animation",
+      "description": "The fearless one-eyed weasel Buck teams up with mischievous possum brothers Crash & Eddie as they head off on a new adventure into Buck's home: The Dinosaur World."
+    },
+    {
+      "id": 62,
+      "img": "qBLEWvJNVsehJkEJqIigPsWyBse.jpg",
+      "nameMovie": "Hotel Transylvania: Transformania",
+      "category": "animation",
+      "description": "When Van Helsing's mysterious invention, the \"Monsterfication Ray,\" goes haywire, Drac and his monster pals are all transformed into humans, and Johnny becomes a monster. In their new mismatched bodies, Drac and Johnny must team up and race across the globe to find a cure before it's too late, and before they drive each other crazy."
+    },
+    {
+      "id": 63,
+      "img": "cugmVwK0N4aAcLibelKN5jWDXSx.jpg",
+      "nameMovie": "My Hero Academia: World Heroes' Mission",
+      "category": "animation",
+      "description": "A mysterious group called Humarize strongly believes in the Quirk Singularity Doomsday theory which states that when quirks get mixed further in with future generations, that power will bring forth the end of humanity. In order to save everyone, the Pro-Heroes around the world ask UA Academy heroes-in-training to assist them and form a world-classic selected hero team. It is up to the heroes to save the world and the future of heroes in what is the most dangerous crisis to take place yet in My Hero Academia."
+    },
+    {
+      "id": 64,
+      "img": "tutaKitJJIaqZPyMz7rxrhb4Yxm.jpg",
+      "nameMovie": "Sing 2",
+      "category": "animation",
+      "description": "Buster and his new cast now have their sights set on debuting a new show at the Crystal Tower Theater in glamorous Redshore City. But with no connections, he and his singers must sneak into the Crystal Entertainment offices, run by the ruthless wolf mogul Jimmy Crystal, where the gang pitches the ridiculous idea of casting the lion rock legend Clay Calloway in their show. Buster must embark on a quest to find the now-isolated Clay and persuade him to return to the stage."
+    },
+    {
+      "id": 65,
+      "img": "xPpXYnCWfjkt3zzE0dpCNME1pXF.jpg",
+      "nameMovie": "Demon Slayer-Kimetsu No Yaiba. The Movie: Mugen Train",
+      "category": "animation",
+      "description": "Tanjirō Kamado, joined with Inosuke Hashibira, a boy raised by boars who wears a boar's head, and Zenitsu Agatsuma, a scared boy who reveals his true power when he sleeps, boards the Infinity Train on a new mission with the Fire Hashira, Kyōjurō Rengoku, to defeat a demon who has been tormenting the people and killing the demon slayers who oppose it!"
+    },
+    {
+      "id": 66,
+      "img": "hk4PwhKhT7q7jp1lvA8aiYqDluy.jpg",
+      "nameMovie": "The House",
+      "category": "animation",
+      "description": "Across different eras, a poor family, an anxious developer and a fed-up landlady become tied to the same mysterious house in this animated dark comedy."
+    },
+    {
+      "id": 67,
+      "img": "q1NXVYTqSStNQsnKrCvtU6NPzEk.jpg",
+      "nameMovie": "Tom And Jerry: Cowboy Up!",
+      "category": "animation",
+      "description": "This time, the rivals team up to help a cowgirl and her brother save their homestead from a greedy land-grabber, and they’re going to need some help! Jerry’s three precocious nephews are all ready for action, and Tom is rounding up a posse of prairie dogs. But can a ragtag band of varmints defeat a deceitful desperado determined to deceive a damsel in distress? No matter what happens with Tom and Jerry in the saddle, it’ll be a rootin’ tootin’ good time!"
+    },
+    {
+      "id": 68,
+      "img": "sdL37sfUBth7mdkAolI83bXAl7L.jpg",
+      "nameMovie": "Ron's Gone Wrong",
+      "category": "animation",
+      "description": "In a world where walking, talking, digitally connected bots have become children's best friends, an 11-year-old finds that his robot buddy doesn't quite work the same as the others do."
+    },
+    {
+      "id": 69,
+      "img": "vkjsoMF86dJIv6Sgtd4CcuR8kzh.jpg",
+      "nameMovie": "The Seven Deadly Sins: Cursed By Light",
+      "category": "animation",
+      "description": "With the help of the \"Dragon Sin of Wrath\" Meliodas and the worst rebels in history, the Seven Deadly Sins, the \"Holy War\", in which four races, including Humans, Goddesses, Fairies and Giants fought against the Demons, is finally over. At the cost of the \"Lion Sin of Pride\" Escanor's life, the Demon King was defeated and the world regained peace. After that, each of the Sins take their own path."
+    },
+    {
+      "id": 70,
+      "img": "pxOiKwRvNp3zFOiuwpYpzlbmEgC.jpg",
+      "nameMovie": "The Boss Baby: Family Business",
+      "category": "animation",
+      "description": "The Templeton brothers — Tim and his Boss Baby little bro Ted — have become adults and drifted away from each other. But a new boss baby with a cutting-edge approach and a can-do attitude is about to bring them together again … and inspire a new family business."
+    },
+    {
+      "id": 71,
+      "img": "1zgob2Z8xVE3RZUgOKnHKcVPzOE.jpg",
+      "nameMovie": "The Simpsons In Plusaversary",
+      "category": "animation",
+      "description": "The Simpsons host a Disney+ Day party and everyone is on the list… except Homer. With friends from across the service and music fit for a Disney Princess, Plusaversary is Springfield's event of the year."
+    },
+    {
+      "id": 72,
+      "img": "620hnMVLu6RSZW6a5rwO8gqpt0t.jpg",
+      "nameMovie": "Luca",
+      "category": "animation",
+      "description": "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface."
+    },
+    {
+      "id": 73,
+      "img": "a17F3zXnmuwqxfiDa46mtlosjrv.jpg",
+      "nameMovie": "PAW Patrol: The Movie",
+      "category": "animation",
+      "description": "Ryder and the pups are called to Adventure City to stop Mayor Humdinger from turning the bustling metropolis into a state of chaos."
+    },
+    {
+      "id": 74,
+      "img": "x78cvxbmpBNcHON7x3Iv8vih5Sj.jpg",
+      "nameMovie": "Diary Of A Wimby Kid",
+      "category": "animation",
+      "description": "Greg Heffley is a scrawny but ambitious kid with an active imagination and big plans to be rich and famous – he just has to survive middle school first."
+    },
+    {
+      "id": 75,
+      "img": "qqthj8EUL4QKlDBoMcPqeWvi6Ya.jpg",
+      "nameMovie": "Riverdance: The Animated Adventure",
+      "category": "animation",
+      "description": "A young Irish boy named Keegan and Spanish girl named Moya journey into a magical world of the Megaloceros Giganteus who teach them to appreciate Riverdance as a celebration of life. Based on the stage show phenomenon of the same name and featuring Bill Whelan’s multi-platinum Grammy Award-winning music."
+    },
+    {
+      "id": 76,
+      "img": "iMFDOpE52wbT9GXYTvv4Em6QDhl.jpg",
+      "nameMovie": "Turning Red",
+      "category": "animation",
+      "description": "Thirteen-year-old Mei is experiencing the awkwardness of being a teenager with a twist – when she gets too excited, she transforms into a giant red panda."
+    },
+    {
+      "id": 77,
+      "img": "5B22eed7ErxFiYAG4Ksb4eLwKNF.jpg",
+      "nameMovie": "Back To The Outback",
+      "category": "animation",
+      "description": "Tired of being locked in a reptile house where humans gawk at them like they are monsters, a ragtag group of Australia’s deadliest creatures plot an escape from their zoo to the Outback, a place where they’ll fit in without being judged."
+    },
+    {
+      "id": 78,
+      "img": "mI0Qo7VtgW5siCtQQqNPXIk0Ar6.jpg",
+      "nameMovie": "Mobile Suit Gundam Hathaway",
+      "category": "animation",
+      "description": "After Char's rebellion, Hathaway Noa leads an insurgency against Earth Federation, but meeting an enemy officer and a mysterious woman alters his fate."
+    },
+    {
+      "id": 79,
+      "img": "hdXQxlD4mep7qtC5TsvhIt840OV.jpg",
+      "nameMovie": "Deathstroke: Knights & Dragons - The Movie",
+      "category": "animation",
+      "description": "The assassin Deathstroke tries to save his family from the wrath of H.I.V.E. and the murderous Jackal."
+    },
+    {
+      "id": 80,
+      "img": "qqthj8EUL4QKlDBoMcPqeWvi6Ya.jpg",
+      "nameMovie": "Riverdance: The Animated Adventure",
+      "category": "animation",
+      "description": "A young Irish boy named Keegan and Spanish girl named Moya journey into a magical world of the Megaloceros Giganteus who teach them to appreciate Riverdance as a celebration of life. Based on the stage show phenomenon of the same name and featuring Bill Whelan’s multi-platinum Grammy Award-winning music."
+    }
+  ],
+  "myList": [],
+  "package": [
+    {
+      "id": 1,
+      "name": "Di động",
+      "nameEng": "Mobile",
+      "price": 70000,
+      "quality": "Tốt",
+      "resolution": "480p",
+      "device": [
+        "Điện thoại",
+        "Máy tính bảng"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Cơ bản",
+      "nameEng": "Basic",
+      "price": 180000,
+      "quality": "Tốt",
+      "resolution": "480p",
+      "device": [
+        "Điện thoại",
+        "Máy tính bảng",
+        "Máy tính",
+        "Ti vi"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Tiêu chuẩn",
+      "nameEng": "Standard",
+      "price": 220000,
+      "quality": "Tốt hơn",
+      "resolution": "1080p",
+      "device": [
+        "Điện thoại",
+        "Máy tính bảng",
+        "Máy tính",
+        "Ti vi"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Cao cấp",
+      "nameEng": "Premium",
+      "price": 260000,
+      "quality": "Tốt nhất",
+      "resolution": "4K+HDR",
+      "device": [
+        "Điện thoại",
+        "Máy tính bảng",
+        "Máy tính",
+        "Ti vi"
+      ]
+    }
+  ],
+  "account": [
+    {
+      "language": "english",
+      "email": "hung@gmail.com",
+      "passwordAcc": "1234567",
+      "package": "Tiêu chuẩn",
+      "firstName": "a",
+      "lastName": "s",
+      "cardNumber": "d",
+      "date": "f",
+      "passwordCard": "g",
+      "id": 1
+    },
+    {
+      "language": "english",
+      "email": "hungnguyen@gmail.com",
+      "passwordAcc": "hung123456",
+      "package": "Cao cấp",
+      "firstName": "Nguyen",
+      "lastName": "Hung",
+      "cardNumber": "0969812680",
+      "date": "27/11/2001",
+      "passwordCard": "12345",
+      "id": 2
+    }
+  ]
 }

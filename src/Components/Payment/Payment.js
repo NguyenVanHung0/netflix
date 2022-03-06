@@ -34,22 +34,22 @@ function Payment(props) {
                         </div>
                         <div className='payment__body-content-text'>
                             <p className='payment__body-content-step'>
-                                BƯỚC <b>3</b>/<b>3</b>
+                                {isVietNam ? 'BƯỚC' : 'STEP'} <b>3</b>/<b>3</b>
                             </p>
                             <h3 className='payment__body-content-header'>
-                                Thiết lập phương thức thanh toán
+                                {isVietNam ? 'Thiết lập phương thức thanh toán' : 'Set up your payment'}
                             </h3>
                             <p className='payment__body-content-light'>
-                                Tư cách thành viên của bạn sẽ bắt đầu ngay khi bạn thiết lập thanh toán.
+                                {isVietNam ? 'Tư cách thành viên của bạn sẽ bắt đầu ngay khi bạn thiết lập thanh toán.' : 'Your membership starts as soon as you set up payment.'}
                             </p>
                             <p className='payment__body-content-dark'>
-                                Không yêu cầu cam kết.
-                                Hủy trực tuyến bất kỳ lúc nào.
+                                {isVietNam ? 'Không yêu cầu cam kết.' : 'No commitments.'}
+                                {isVietNam ? 'Hủy trực tuyến bất kỳ lúc nào.' : 'Cancel online anytime.'}
                             </p>
                         </div>
                         <div className='payment__body-content-method'>
                             <div className='payment__body-content-method-security'>
-                                Máy chủ bảo mật
+                                {isVietNam ? 'Máy chủ bảo mật' : 'Secure Server'}
                                 <svg viewBox="0 0 12 16" className="payment__body-content-method-svg">
                                     <g fill="none">
                                         <g fill="#FFB53F">
@@ -65,7 +65,7 @@ function Payment(props) {
 
                                     <div className='payment__body-content-method-select'>
                                         <div className='payment__body-content-method-select-text'>
-                                            Thẻ ghi nợ hoặc thẻ tín dụng
+                                            {isVietNam ? 'Thẻ ghi nợ hoặc thẻ tín dụng' : 'Credit or Debit Card'}
                                         </div>
                                         <div className='payment__body-content-method-select-img'>
                                             <img src={visa} />
@@ -94,11 +94,4 @@ const mapStateToProps = (state) => {
     return { language: state.language }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language })
-    }
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Payment))
+export default connect(mapStateToProps)(withRouter(Payment))

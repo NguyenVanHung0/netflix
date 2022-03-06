@@ -1,17 +1,13 @@
-import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
-import { FaGlobe, FaAngleDown } from 'react-icons/fa'
-import { useState, useRef, useEffect } from 'react'
 import './Registration.css'
 import withRouter from '../../router/withRouter'
+import { useEffect, useState } from 'react'
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
-
-
-
+import { connect } from 'react-redux'
 
 function Registration(props) {
     let isVietNam = props.language == 'vietnam'
+
 
     function handleClickNext() {
         const navigate = props.router.navigate;
@@ -27,16 +23,16 @@ function Registration(props) {
 
                     </div>
                     <div className='registration__body-content'>
-                        <span className='registration__body-content-step'>BƯỚC <b>1</b>/<b>3</b></span>
+                        <span className='registration__body-content-step'>{isVietNam ? 'BƯỚC' : 'STEP'} <b>1</b>/<b>3</b></span>
                         <div className='registration__body-content-header'>
-                            Hoàn thành việc cài đặt tài khoản của bạn
+                            {isVietNam ? 'Hoàn thành việc cài đặt tài khoản của bạn' : 'Finish setting up your account'}
                         </div>
                         <p className='registration__body-content-text'>
-                            Netflix được cá nhân hóa cho riêng bạn. Tạo mật khẩu để xem Netflix trên bất kỳ thiết bị nào, vào bất cứ lúc nào.
+                            {isVietNam ? 'Netflix được cá nhân hóa cho riêng bạn. Tạo mật khẩu để xem Netflix trên bất kỳ thiết bị nào, vào bất cứ lúc nào.' : 'Netflix is personalized for you. Create a password to watch on any device at any time.'}
                         </p>
                     </div>
                     <div className='registration__body-btn'>
-                        <button onClick={handleClickNext}>Tiếp theo</button>
+                        <button onClick={handleClickNext}>{isVietNam ? 'Tiếp theo' : 'Next'}</button>
                     </div>
                 </div>
             </div>
@@ -46,13 +42,11 @@ function Registration(props) {
 }
 
 const mapStateToProps = (state) => {
-    return { language: state.language }
-}
-
-const mapDispatchToProps = (dispatch) => {
     return {
-        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language })
+        language: state.language,
+        email: state.email
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Registration))
+
+export default connect(mapStateToProps)(withRouter(Registration))

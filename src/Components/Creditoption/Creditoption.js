@@ -5,12 +5,90 @@ import visa from '../../assets/img/visa.svg'
 import mastercard from '../../assets/img/mastercard.svg'
 import amex from '../../assets/img/amex.svg'
 import withRouter from '../../router/withRouter'
+import { connect } from 'react-redux'
+import { useEffect, useRef, useState } from 'react'
 
 function Creditoption(props) {
+    const isVietNam = props.language == 'vietnam'
+
+    const [packages, setPackages] = useState([])
+    const [selectPackage, setSelectPackage] = useState({})
+
+    const firstName = useRef()
+    const lastName = useRef()
+    const cardNumber = useRef()
+    const inputCheckBox = useRef()
+    const date = useRef()
+    const password = useRef()
+
+    useEffect(() => {
+        fetch('http://localhost:3000/package')
+            .then(res => res.json())
+            .then(packagess => {
+                setPackages(packagess)
+            })
+    }, [])
+
+    useEffect(() => {
+        if (packages.length > 0) {
+
+            packages.forEach((Item, index) => {
+                if (Item.name == props.package) {
+                    setSelectPackage(Item)
+                }
+            })
+        }
+    }, [packages])
+
 
     function handleClickChange() {
         const navigate = props.router.navigate
         navigate('/signup/planform')
+    }
+
+    function handleClickCreBtn() {
+        if (firstName.current.value == '') {
+            alert(isVietNam ? `Thiếu ${firstName.current.placeholder}` : `Invalid ${firstName.current.placeholder}`)
+        }
+        if (lastName.current.value == '') {
+            alert(isVietNam ? `Thiếu ${lastName.current.placeholder}` : `Invalid ${lastName.current.placeholder}`)
+        }
+        if (cardNumber.current.value == '') {
+            alert(isVietNam ? `Thiếu ${cardNumber.current.placeholder}` : `Invalid ${cardNumber.current.placeholder}`)
+        }
+        if (date.current.value == '') {
+            alert(isVietNam ? `Thiếu ${date.current.placeholder}` : `Invalid ${date.current.placeholder}`)
+        }
+        if (password.current.value == '') {
+            alert(isVietNam ? `Thiếu ${password.current.placeholder}` : `Invalid ${password.current.placeholder}`)
+        }
+        if (!inputCheckBox.current.checked) {
+            alert(isVietNam ? `Bạn cần click đồng ý` : `you need to click agree`)
+        }
+        if (firstName.current.value && lastName.current.value && cardNumber.current.value && date.current.value && password.current.value && inputCheckBox.current.checked) {
+            const account = {
+                language: props.language,
+                email: props.email,
+                passwordAcc: props.password,
+                package: props.package,
+                firstName: firstName.current.value,
+                lastName: lastName.current.value,
+                cardNumber: cardNumber.current.value,
+                date: date.current.value,
+                passwordCard: password.current.value
+            }
+
+            fetch('http://localhost:3000/account', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(account)
+            })
+
+            const navigate = props.router.navigate
+            navigate('/browser')
+        }
     }
 
     return (
@@ -20,8 +98,8 @@ function Creditoption(props) {
             <div className='creditoption__body'>
                 <div className='creditoption__body-box'>
                     <div className='creditoption__body-header'>
-                        <p>BƯỚC <b>3</b>/<b>3</b></p>
-                        <h3>Thiết lập thẻ tín dụng hoặc thẻ ghi nợ</h3>
+                        <p>{isVietNam ? 'BƯỚC' : 'STEP'} <b>3</b>/<b>3</b></p>
+                        <h3>{isVietNam ? 'Thiết lập thẻ tín dụng hoặc thẻ ghi nợ' : 'Set up your credit or debit card'}</h3>
                     </div>
                     <div className='creditoption__body-content'>
                         <div className='creditoption__body-content-img'>
@@ -30,37 +108,37 @@ function Creditoption(props) {
                             <img src={amex} />
                         </div>
                         <div className='creditoption__body-content-input'>
-                            <input type='text' placeholder='Tên' />
-                            <input type='text' placeholder='Họ' />
-                            <input type='text' placeholder='Số thẻ' />
-                            <input type='text' placeholder='Ngày hết hạn (MM/YY)' />
-                            <input type='password' placeholder='Mã bảo mật (CVV)' />
+                            <input ref={firstName} type='text' placeholder={isVietNam ? 'Tên' : 'First Name'} />
+                            <input ref={lastName} type='text' placeholder={isVietNam ? 'Họ' : 'Last Name'} />
+                            <input ref={cardNumber} type='text' pattern='[0-9]' placeholder={isVietNam ? 'Số thẻ' : 'Card Number'} />
+                            <input ref={date} type='text' placeholder={isVietNam ? 'Ngày hết hạn (MM/YY)' : 'Expiration date(MM/YY)'} />
+                            <input ref={password} type='password' placeholder={isVietNam ? 'Mã bảo mật (CVV)' : 'Security code (CVV)'} />
                         </div>
                     </div>
                     <div className='creditoption__body-text'>
                         <div className='creditoption__body-text-price'>
                             <div className='creditoption__body-text-price-text'>
-                                <p className='creditoption__body-text-price-textdark'>260.000 ₫/tháng</p>
-                                <p className='creditoption__body-text-price-textlight'>Gói Cao cấp</p>
+                                <p className='creditoption__body-text-price-textdark'>{selectPackage.price} ₫/{isVietNam ? 'tháng' : 'month'}</p>
+                                <p className='creditoption__body-text-price-textlight'>{isVietNam ? selectPackage.name : selectPackage.nameEng}</p>
                             </div>
                             <button onClick={handleClickChange} className='creditoption__body-text-price-btn'>
-                                Thay đổi
+                                {isVietNam ? 'Thay đổi' : 'Change'}
                             </button>
                         </div>
                         <p className='creditoption__body-text-1'>
-                            Các khoản thanh toán của bạn sẽ được xử lý ở nước ngoài. Bạn có thể phải trả thêm phí ngân hàng.
+                            {isVietNam ? 'Các khoản thanh toán của bạn sẽ được xử lý ở nước ngoài. Bạn có thể phải trả thêm phí ngân hàng.' : 'Your payments will be processed internationally. Additional bank fees may apply.'}
                         </p>
                         <p className='creditoption__body-text-2'>
-                            Bằng cách đánh dấu vào hộp kiểm bên dưới, bạn đồng ý với <a href=''>Điều khoản sử dụng</a>, <a href=''>Tuyên bố về quyền riêng tư</a> tư của chúng tôi, đồng thời xác nhận rằng bạn trên 18 tuổi. Netflix sẽ tự động gia hạn tư cách thành viên của bạn và tính phí thành viên (hiện tại là 260.000 ₫/tháng) vào phương thức thanh toán của bạn cho đến khi bạn hủy. Bạn có thể hủy bất kỳ lúc nào để tránh bị tính phí về sau.
+                            {isVietNam ? 'Bằng cách đánh dấu vào hộp kiểm bên dưới, bạn đồng ý với' : 'By checking the checkbox below, you agree to our'} <a href='https://help.netflix.com/legal/termsofuse'>{isVietNam ? 'Điều khoản sử dụng' : 'Terms of User'}</a>, <a href='https://help.netflix.com/legal/privacy'>{isVietNam ? 'Tuyên bố về quyền riêng tư' : 'Privacy Statement'}</a> {isVietNam ? `tư của chúng tôi, đồng thời xác nhận rằng bạn trên 18 tuổi. Netflix sẽ tự động gia hạn tư cách thành viên của bạn và tính phí thành viên (hiện tại là ${selectPackage.price} ₫/tháng) vào phương thức thanh toán của bạn cho đến khi bạn hủy. Bạn có thể hủy bất kỳ lúc nào để tránh bị tính phí về sau.` : `, and that you are over 18. Netflix will automatically continue your membership and charge the membership fee (currently ${selectPackage.price} ₫/month) to your payment method until you cancel. You may cancel at any time to avoid future charges.`}
                         </p>
                         <div className='creditoption__body-label'>
-                            <input id='checkbox' type='checkbox' />
-                            <label htmlFor='checkbox'>Tôi đồng ý</label>
+                            <input id='checkbox' ref={inputCheckBox} type='checkbox' />
+                            <label htmlFor='checkbox'>{isVietNam ? 'Tôi đồng ý' : 'I agree'}</label>
                         </div>
                     </div>
                     <div className='reg__body-form-btn'>
                         <div className='registration__body-btn reg__body-form-btn-btn'>
-                            <button>Kích hoạt tư cách thành viên</button>
+                            <button onClick={handleClickCreBtn}>{isVietNam ? 'Kích hoạt tư cách thành viên' : 'Start Membership'}</button>
                         </div>
                     </div>
                 </div>
@@ -71,4 +149,13 @@ function Creditoption(props) {
     )
 }
 
-export default withRouter(Creditoption)
+const mapStateToProps = (state) => {
+    return {
+        language: state.language,
+        package: state.package,
+        email: state.email,
+        password: state.password
+    }
+}
+
+export default connect(mapStateToProps)(withRouter(Creditoption))

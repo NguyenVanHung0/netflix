@@ -1,6 +1,4 @@
 .header-banner {
-  background: url("../../../assets/img/background_browser.jpg") top left / cover
-    no-repeat;
   height: 500px;
 }
 
@@ -14,6 +12,9 @@
   display: flex;
   justify-content: space-between;
   padding: 0px 55px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 
 .header__logo--list {
@@ -36,16 +37,16 @@
   font-size: 18px;
 }
 
-.header__logo-item a:hover {
-  color: #b3b3b3;
-}
-
 .header__logo-item a {
   color: #e5e5e5;
   text-decoration: none;
   font-weight: 500;
   margin: 0 12px;
   height: 100%;
+}
+
+.header__logo-item a:hover {
+  color: #b3b3b3;
 }
 
 .header__logo-item-active a {
@@ -60,9 +61,10 @@
 }
 
 .header__account-input {
-  width: 0px;
+  width: 200px;
   margin-right: 8px;
-  transition: width 0.3s ease;
+  transition: width 0.3s linear;
+  animation: leftToRight ease 0.5s;
 }
 
 .header__account-input input {
@@ -81,20 +83,23 @@
   cursor: pointer;
 }
 
-.header__account-search:hover .header__account-input {
-  width: 200px;
-}
-
 .header__account-search {
   color: #ebebeb;
   margin-right: 32px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .header__account-search svg {
   width: 24px;
   height: 24px;
+}
+
+.header__account-box {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .header__account-img,
@@ -117,11 +122,30 @@
   height: 16px;
 }
 
+.sign-out {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 180px;
+  height: 53px;
+  padding: 15px 27px;
+  font-size: 1.8rem;
+  color: #f2f2f2;
+  font-weight: 500;
+  border: 1px solid hsla(0, 0%, 100%, 0.5);
+  animation: up40 ease 0.3s;
+}
+
+.sign-out:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .banner {
-  padding: 0 55px 10px;
+  padding: 70px 55px 10px;
   position: relative;
-  height: 402px;
-  margin-top: 30px;
+  height: 500px;
 }
 
 .banner__header {
@@ -158,10 +182,12 @@
 
 .banner__btn-play:hover {
   background-color: #cc0812;
+  cursor: pointer;
 }
 
 .banner__btn-inf:hover {
   background-color: #6d6d6e;
+  cursor: pointer;
 }
 
 .banner__btn-play svg {
@@ -182,7 +208,7 @@
   font-size: 1.6rem;
   color: #ebebeb;
   margin-top: 14px;
-  width: 410px;
+  width: 510px;
 }
 
 .banner__shadow {
@@ -190,7 +216,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 75px;
+  height: 70px;
   background: linear-gradient(
     180deg,
     transparent,

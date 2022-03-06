@@ -15,7 +15,7 @@ function HomeContent(props) {
                     {isVietNam ? 'Xem các bộ phim và chương trình truyền hình mới được tuyển chọn mà không cần cung cấp thông tin thanh toán!' : 'Watch a selection of new movies and TV shows without adding any payment details!'}
                 </div>
                 <div className='hom__content-link'>
-                    <a href=''>
+                    <a href='https://play.google.com/store/apps/details?id=com.netflix.mediaclient'>
                         {isVietNam ? 'Tải ứng dụng' : 'Get the app'}
                         <FaAngleRight className='home__icon-right2' />
                     </a>

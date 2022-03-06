@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.95a9fab0.css",
-    "main.js": "./static/js/main.b469fb2c.js",
+    "main.css": "./static/css/main.af1b8292.css",
+    "main.js": "./static/js/main.b896aa4e.js",
     "static/js/787.0904c1f0.chunk.js": "./static/js/787.0904c1f0.chunk.js",
-    "static/media/background_browser.jpg": "./static/media/background_browser.f9eb96e42297926c28e8.jpg",
     "static/media/android.jpg": "./static/media/android.8f321d90d9c0d0f65078.jpg",
     "static/media/background.jpg": "./static/media/background.7c8b0d8734e2fba2deac.jpg",
     "static/media/mastercard.svg": "./static/media/mastercard.dc6e1dc61a318c1296f31f4dde5fed8f.svg",
@@ -11,12 +10,12 @@
     "static/media/right.svg": "./static/media/right.f1459136a3d413b7a2a1d100362a6d0e.svg",
     "static/media/visa.svg": "./static/media/visa.bd37a379cc4bcbe73f42743fcb42b0d8.svg",
     "index.html": "./index.html",
-    "main.95a9fab0.css.map": "./static/css/main.95a9fab0.css.map",
-    "main.b469fb2c.js.map": "./static/js/main.b469fb2c.js.map",
+    "main.af1b8292.css.map": "./static/css/main.af1b8292.css.map",
+    "main.b896aa4e.js.map": "./static/js/main.b896aa4e.js.map",
     "787.0904c1f0.chunk.js.map": "./static/js/787.0904c1f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95a9fab0.css",
-    "static/js/main.b469fb2c.js"
+    "static/css/main.af1b8292.css",
+    "static/js/main.b896aa4e.js"
   ]
 }

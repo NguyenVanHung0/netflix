@@ -7,6 +7,7 @@ import amex from '../../assets/img/amex.svg'
 import withRouter from '../../router/withRouter'
 import { connect } from 'react-redux'
 import { useEffect, useRef, useState } from 'react'
+import { toast } from 'react-toastify'
 
 function Creditoption(props) {
     const isVietNam = props.language == 'vietnam'
@@ -48,22 +49,125 @@ function Creditoption(props) {
 
     function handleClickCreBtn() {
         if (firstName.current.value == '') {
-            alert(isVietNam ? `Thiếu ${firstName.current.placeholder}` : `Invalid ${firstName.current.placeholder}`)
+
+            isVietNam ? toast.error(`Thiếu ${firstName.current.placeholder}`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            }) : toast.error(`Invalid ${firstName.current.placeholder}`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
+
         }
         if (lastName.current.value == '') {
-            alert(isVietNam ? `Thiếu ${lastName.current.placeholder}` : `Invalid ${lastName.current.placeholder}`)
+            isVietNam ? toast.error(`Thiếu ${lastName.current.placeholder}`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            }) : toast.error(`Invalid ${lastName.current.placeholder}`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
+
         }
         if (cardNumber.current.value == '') {
-            alert(isVietNam ? `Thiếu ${cardNumber.current.placeholder}` : `Invalid ${cardNumber.current.placeholder}`)
+            isVietNam ? toast.error(`Thiếu ${cardNumber.current.placeholder}`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            }) : toast.error(`Invalid ${cardNumber.current.placeholder}`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
+
         }
         if (date.current.value == '') {
-            alert(isVietNam ? `Thiếu ${date.current.placeholder}` : `Invalid ${date.current.placeholder}`)
+            isVietNam ? toast.error(`Thiếu ${date.current.placeholder}`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            }) : toast.error(`Invalid ${date.current.placeholder}`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
+
         }
         if (password.current.value == '') {
-            alert(isVietNam ? `Thiếu ${password.current.placeholder}` : `Invalid ${password.current.placeholder}`)
+            isVietNam ? toast.error(`Thiếu ${password.current.placeholder}`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            }) : toast.error(`Invalid ${password.current.placeholder}`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
+
         }
         if (!inputCheckBox.current.checked) {
-            alert(isVietNam ? `Bạn cần click đồng ý` : `you need to click agree`)
+            isVietNam ? toast.error(`Bạn cần click đồng ý`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            }) : toast.error(`you need to click agree`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
+
         }
         if (firstName.current.value && lastName.current.value && cardNumber.current.value && date.current.value && password.current.value && inputCheckBox.current.checked) {
             const account = {

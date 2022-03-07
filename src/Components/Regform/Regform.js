@@ -4,6 +4,7 @@ import withRouter from '../../router/withRouter'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import { useState, useEffect, useRef } from 'react'
+import { toast } from 'react-toastify'
 
 
 function Regform(props) {
@@ -20,11 +21,27 @@ function Regform(props) {
                 navigate('/signup')
             }
             else {
-                alert('Password must be at least 6 characters')
+                toast.error('Password must be at least 6 characters', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
             }
         }
         else {
-            alert('Invalid password')
+            toast.error('Invalid password', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
     }
 

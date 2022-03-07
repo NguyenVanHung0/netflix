@@ -3,6 +3,7 @@ import { FaPlus, FaAngleRight } from 'react-icons/fa'
 import { connect } from 'react-redux'
 import withRouter from '../../../router/withRouter'
 import { useRef } from 'react'
+import { toast } from 'react-toastify'
 
 
 function NormalQuestion(props) {
@@ -56,11 +57,27 @@ function NormalQuestion(props) {
                 navigate('/signup/registration')
             }
             else {
-                alert('not an email')
+                toast.error('Not an email', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
             }
         }
         else {
-            alert('invalid email')
+            toast.error('Invalid email', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
     }
 

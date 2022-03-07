@@ -1,4 +1,6 @@
 import './App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Home from '../Home/Home'
 import Login from '../Login/Login'
 import Registration from '../Registration/Registration'
@@ -13,6 +15,7 @@ import { Routes, Route } from 'react-router-dom'
 import TVSeries from '../Browser/BrowserBody/TVSeries';
 import Movies from '../Browser/BrowserBody/Movies';
 import NewPopular from '../Browser/BrowserBody/NewPopular'
+import VideoPage from '../VideoPage/VideoPage.js'
 
 
 
@@ -34,7 +37,19 @@ function App() {
         <Route path='/movies' element={<Movies />} />
         <Route path='/new&popular' element={<NewPopular />} />
         <Route path='/mylist' element={<MyList />} />
+        <Route path='/movie' element={<VideoPage />} />
       </Routes>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

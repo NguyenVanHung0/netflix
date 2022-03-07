@@ -2,7 +2,8 @@ const initState = {
     language: 'vietnam',
     email: '',
     password: '',
-    package: ''
+    package: '',
+    moviePlay: {}
 }
 
 const rootReducer = (state = initState, action) => {
@@ -26,6 +27,11 @@ const rootReducer = (state = initState, action) => {
             return {
                 ...state,
                 package: action.payload
+            }
+        case 'SET_MOVIEPLAY':
+            return {
+                ...state,
+                moviePlay: action.payload
             }
         default:
             return state;

@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import withRouter from '../../../router/withRouter'
+import { toast } from 'react-toastify'
 
 function useOutsideAlerter(ref, setAppear) {
     useEffect(() => {
@@ -67,11 +68,27 @@ function HomeHeader(props) {
                 navigate('/signup/registration')
             }
             else {
-                alert('not an email')
+                toast.error('Not an email', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
             }
         }
         else {
-            alert('invalid email')
+            toast.error('Invalid email', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
     }
 

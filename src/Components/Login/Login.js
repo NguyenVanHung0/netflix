@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { useState, useRef, useEffect } from 'react'
 import withRouter from '../../router/withRouter'
 import { connect } from 'react-redux'
+import { toast } from 'react-toastify'
 
 
 function useOutsideAlerter(ref, setAppear) {
@@ -65,10 +66,26 @@ function Login(props) {
 
     const handleClickSignIn = () => {
         if (emailInput.current.value == '') {
-            alert('Invalid Email')
+            toast.error('Invalid email', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
         if (passwordInput.current.value == '') {
-            alert('Invalid Password')
+            toast.error('Invalid password', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
         if (passwordInput.current.value && emailInput.current.value) {
             const isAcc = accounts.find((account, index) => {
@@ -80,7 +97,15 @@ function Login(props) {
                 navigate('/browser')
             }
             else {
-                alert('Account does not exist')
+                toast.error('Account does not exist', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
             }
         }
     }

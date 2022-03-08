@@ -2,22 +2,33 @@ import { Link } from 'react-router-dom'
 import account from '../../../assets/img/account.png'
 import { useEffect, useRef, useState } from 'react'
 import withRouter from '../../../router/withRouter'
+import { connect } from 'react-redux'
 
 function HeaderNavbar({ indexList, ...props }) {
-
+    const isVietNam = props.language == 'vietnam'
     const [isInput, setIsInput] = useState(false)
     const [isSignOut, setIsSignOut] = useState(false)
     const header = useRef()
     const [isActive, setIsActive] = useState(0)
-    const [linkHeader, setLinkHeader] = useState(['Home', 'TV Series', 'Movies', 'New & Popular', 'My List'])
+    const [linkHeader, setLinkHeader] = useState([])
+    const linkEng = ['Home', 'TV Series', 'Movies', 'New & Popular', 'My List']
+
+    useEffect(() => {
+        if (isVietNam) {
+            setLinkHeader(['Trang chủ', 'Truyền hình', 'Phim', 'Mới và phổ biến', 'Danh sách của tôi'])
+        }
+        else {
+            setLinkHeader(['Home', 'TV Series', 'Movies', 'New & Popular', 'My List'])
+        }
+    }, [isVietNam])
 
     useEffect(() => {
         const handleScrollWindow = () => {
             if (window.scrollY > 100) {
-                header.current.style.backgroundColor = '#141414'
+                header.current ? header.current.style.backgroundColor = '#141414' : header.current.style.backgroundColor = '#141414'
             }
             else {
-                header.current.style.backgroundColor = 'transparent'
+                header.current ? header.current.style.backgroundColor = 'transparent' : header.current.style.backgroundColor = 'transparent'
             }
         }
 
@@ -64,7 +75,7 @@ function HeaderNavbar({ indexList, ...props }) {
                     {linkHeader.map((link, index) => {
                         return (
                             <li key={index} className={isActive == index ? 'header__logo-item header__logo-item-active' : 'header__logo-item'}>
-                                <Link to={'/' + link.toLocaleLowerCase().replace(/\s+/g, '')}>
+                                <Link to={'/' + linkEng[index].toLocaleLowerCase().replace(/\s+/g, '')}>
                                     {link}
                                 </Link>
                             </li>
@@ -105,4 +116,11 @@ function HeaderNavbar({ indexList, ...props }) {
     )
 }
 
-export default withRouter(HeaderNavbar)
+const mapStateToProps = (state) => {
+    return {
+        language: state.language
+    }
+}
+
+
+export default connect(mapStateToProps)(withRouter(HeaderNavbar))

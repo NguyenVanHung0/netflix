@@ -6,7 +6,8 @@ import { toast } from 'react-toastify'
 import withRouter from '../../../../router/withRouter'
 import DetailMovie from '../../../DetailMovie/DetailMovie'
 
-function Section({ header, category, ...props }) {
+function Section({ header, headerVien, category, ...props }) {
+    const isVietNam = props.language == 'vietnam'
     const [movies, setMovies] = useState([])
     const [movie, setMovie] = useState('')
     const [k, setK] = useState(1)
@@ -83,7 +84,7 @@ function Section({ header, category, ...props }) {
         <div className='section'>
             <div className='section__header'>
                 <h3>
-                    {header}
+                    {isVietNam ? headerVien : header}
                 </h3>
             </div>
             <div className='section__body'>

@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import withRouter from '../../../router/withRouter';
 
 function MyList(props) {
+    const isVietNam = props.language == 'vietnam'
     const [myList, setMyList] = useState([])
     const [movie, setMovie] = useState('')
     const [a, setA] = useState(0)
@@ -59,7 +60,7 @@ function MyList(props) {
             <HeaderNavbar indexList='4' />
             <div className='mylist__body'>
                 <div className='mylist__header'>
-                    <h3>My List</h3>
+                    <h3>{isVietNam ? 'Danh sách của tôi' : 'My List'}</h3>
                 </div>
                 <ul className='mylist__list'>
                     {myList.length > 0 ? myList.map((movie) => {
@@ -96,7 +97,7 @@ function MyList(props) {
                                 </div>
                             </li>
                         )
-                    }) : <li className='message'>Sorry, you don't have a favourite movie or tv-show yet.</li>
+                    }) : <li className='message'>{isVietNam ? 'Xin lỗi, bạn chưa có bộ phim hay chương trình truyền hình yêu thích' : 'Sorry, you don\'t have a favourite movie or tv-show yet.'}</li>
                     }
                 </ul>
             </div>

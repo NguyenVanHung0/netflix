@@ -60,6 +60,7 @@
 
 .video__page-item img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .video__page-item-content {

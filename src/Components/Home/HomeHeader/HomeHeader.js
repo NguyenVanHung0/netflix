@@ -7,6 +7,7 @@ import withRouter from '../../../router/withRouter'
 import { toast } from 'react-toastify'
 
 function useOutsideAlerter(ref, setAppear) {
+
     useEffect(() => {
         function handleClickOutside(event) {
             if (ref.current && !ref.current.contains(event.target)) {
@@ -30,11 +31,20 @@ function useOutsideAlerter(ref, setAppear) {
 }
 
 function HomeHeader(props) {
+    const [accounts, setAccounts] = useState([])
     const [appear, setAppear] = useState(false)
     const homeLanguage = useRef()
     const inputElement = useRef()
     let isVietNam = props.language == 'vietnam'
     useOutsideAlerter(homeLanguage, setAppear);
+
+    useEffect(() => {
+        fetch('http://localhost:3000/account')
+            .then(res => res.json())
+            .then(accounts => {
+                setAccounts(accounts)
+            })
+    }, [])
 
     const handleAppear = () => {
         setAppear(!appear)
@@ -62,10 +72,26 @@ function HomeHeader(props) {
     function handleClickGetStart() {
         if (inputElement.current.value != '') {
             if (validateEmail(inputElement.current.value)) {
-                const email = inputElement.current.value;
-                props.setEmail(email)
-                const navigate = props.router.navigate;
-                navigate('/signup/registration')
+                const isExist = accounts.find((account, index) => {
+                    return account.email == inputElement.current.value
+                })
+                if (!isExist) {
+                    const email = inputElement.current.value;
+                    props.setEmail(email)
+                    const navigate = props.router.navigate;
+                    navigate('/signup/registration')
+                }
+                else {
+                    toast.error('This email is already taken', {
+                        position: "top-right",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                    });
+                }
             }
             else {
                 toast.error('Not an email', {

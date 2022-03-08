@@ -191,7 +191,7 @@ function Creditoption(props) {
             })
 
             const navigate = props.router.navigate
-            navigate('/browser')
+            navigate('/login')
         }
     }
 

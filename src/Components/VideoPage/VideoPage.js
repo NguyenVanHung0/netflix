@@ -8,6 +8,7 @@ import DetailMovie from '../DetailMovie/DetailMovie'
 import { toast } from 'react-toastify'
 
 function VideoPage(props) {
+    const isVietNam = props.language == 'vietnam'
     const [k, setK] = useState(0)
     const [listMovies, setListMovie] = useState([])
     const [publishBox, setPublishBox] = useState(false)
@@ -16,6 +17,7 @@ function VideoPage(props) {
     const [comments, setComments] = useState([])
     const overlayRef = useRef()
     const [movie, setMovie] = useState('')
+    const [user, setUser] = useState('')
 
 
     useEffect(() => {
@@ -29,6 +31,7 @@ function VideoPage(props) {
             })
     }, [k])
 
+
     useEffect(() => {
         fetch('http://localhost:3000/account')
             .then(res => res.json())
@@ -36,6 +39,17 @@ function VideoPage(props) {
                 setAccounts(accounts)
             })
     }, [])
+
+    useEffect(() => {
+        if (accounts.length > 0) {
+            const user = accounts.find((item, index) => {
+                return item.email == props.userEmail
+            })
+            const userName = user.firstName + ' ' + user.lastName
+            setUser(userName)
+        }
+    }, [accounts])
+
 
     useEffect(() => {
         fetch('http://localhost:3000/movies')
@@ -52,6 +66,7 @@ function VideoPage(props) {
         if (moviePlay) {
             props.setMoviePlay(moviePlay)
             e.stopPropagation()
+            setK(prev => prev + 1)
         }
     }
 
@@ -96,10 +111,11 @@ function VideoPage(props) {
     }
 
     const handleClickPublish = () => {
-        if (inputComment.current.value) {
+        console.log('publị')
+        if (inputComment.current.value && user) {
             const data = {
                 idMovie: props.moviePlay.id,
-                name: accounts[accounts.length - 1].firstName + ' ' + accounts[accounts.length - 1].lastName,
+                name: user,
                 comment: inputComment.current.value
             }
             fetch('http://localhost:3000/comment', {
@@ -121,7 +137,7 @@ function VideoPage(props) {
             <HeaderNavbar />
             <div className='video__page-video-header'>
                 <div className='video__page-vieo'>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yq4n0upxFVg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <iframe width="560" height="315" src={props.moviePlay.videoUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
                 <div className='video__page-header'>
                     <h3>{props.moviePlay.nameMovie}</h3>
@@ -131,7 +147,7 @@ function VideoPage(props) {
                 </div>
             </div>
             <div className='video__page-list'>
-                <h3>Có thể bạn thích xem</h3>
+                <h3>{isVietNam ? 'Có thể bạn thích xem' : 'Maybe you like to watch'}</h3>
                 <ul className='video__page-list-movie'>
                     {listMovies && listMovies.map((movie, index) => {
                         return (
@@ -175,13 +191,13 @@ function VideoPage(props) {
             </div>
             <div className='video__page-comment' onClick={handleClickOutInput}>
                 <div className='video__page-comment-header'>
-                    Thêm bình luận
+                    {isVietNam ? 'Thêm bình luận' : 'Add comment'}
                 </div>
                 <div className='video__page-comment-body'>
                     <div className='video__page-comment-entry'>
                         <div className='video__page-comment-entry-up'>
                             <img src={account} />
-                            <input onClick={(e) => handleClickInput(e)} ref={inputComment} type='text' placeholder='Thêm bình luận' />
+                            <input onClick={(e) => handleClickInput(e)} ref={inputComment} type='text' placeholder={isVietNam ? 'Thêm bình luận' : 'Add comment'} />
                         </div>
                         {publishBox &&
                             <div className='publish' onClick={handleClickPublishBox}>
@@ -201,9 +217,9 @@ function VideoPage(props) {
                                             {comment.comment}
                                         </p>
                                         <div className='video__page-comment-item-like'>
-                                            <p className='like'>Thích</p>
-                                            <p className='feedback'>Phản hồi</p>
-                                            <p className='time'>2 ngày</p>
+                                            <p className='like'>{isVietNam ? 'Thích' : 'Like'}</p>
+                                            <p className='feedback'>{isVietNam ? 'Phản hồi' : 'Feedback'}</p>
+                                            <p className='time'>2 {isVietNam ? 'ngày' : 'Days'}</p>
                                         </div>
                                     </div>
                                 </li>
@@ -222,7 +238,8 @@ function VideoPage(props) {
 const mapStateToProps = (state) => {
     return {
         language: state.language,
-        moviePlay: state.moviePlay
+        moviePlay: state.moviePlay,
+        userEmail: state.userEmail
     }
 }
 

@@ -93,6 +93,7 @@ function Login(props) {
             })
 
             if (isAcc) {
+                props.setUserEmail(emailInput.current.value)
                 const navigate = props.router.navigate
                 navigate('/browser')
             }
@@ -237,7 +238,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language })
+        changeLanguage: (language) => dispatch({ type: 'CHANGE_LANGUAGE', payload: language }),
+        setUserEmail: (email) => dispatch({ type: 'SET_USEREMAIL', payload: email })
     }
 }
 

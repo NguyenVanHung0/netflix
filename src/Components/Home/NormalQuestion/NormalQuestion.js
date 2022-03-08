@@ -2,13 +2,22 @@ import './NormalQuestion.css'
 import { FaPlus, FaAngleRight } from 'react-icons/fa'
 import { connect } from 'react-redux'
 import withRouter from '../../../router/withRouter'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { toast } from 'react-toastify'
 
 
 function NormalQuestion(props) {
+    const [accounts, setAccounts] = useState([])
     const isVietNam = props.language == 'vietnam'
     const inputElement = useRef()
+
+    useEffect(() => {
+        fetch('http://localhost:3000/account')
+            .then(res => res.json())
+            .then(accounts => {
+                setAccounts(accounts)
+            })
+    }, [])
 
     function handleClickItem(e) {
         var supportItem = e.target.parentElement.querySelector('.home__question-item-support')
@@ -51,10 +60,26 @@ function NormalQuestion(props) {
     function handleClickGetStart() {
         if (inputElement.current.value != '') {
             if (validateEmail(inputElement.current.value)) {
-                const email = inputElement.current.value;
-                props.setEmail(email)
-                const navigate = props.router.navigate;
-                navigate('/signup/registration')
+                const isExist = accounts.find((account, index) => {
+                    return account.email == inputElement.current.value
+                })
+                if (!isExist) {
+                    const email = inputElement.current.value;
+                    props.setEmail(email)
+                    const navigate = props.router.navigate;
+                    navigate('/signup/registration')
+                }
+                else {
+                    toast.error('This email is already taken', {
+                        position: "top-right",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                    });
+                }
             }
             else {
                 toast.error('Not an email', {

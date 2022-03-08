@@ -10,10 +10,10 @@ function BrowserHome() {
     return (
         <div>
             <BrowserHeader indexList='0' />
-            <Section category='trending' header='Trending Now' />
-            <Section category='rated' header='Top Rated on Fakeflix' />
-            <Section category='originals' header='Fakeflix Originals' />
-            <Section category='animation' header='Animation' />
+            <Section category='trending' header='Trending Now' headerVien='Xu hướng' />
+            <Section category='rated' header='Top Rated on Fakeflix' headerVien='Xếp hạng cao nhất trên Netflix' />
+            <Section category='originals' header='Fakeflix Originals' headerVien='Nguyên bản Netflix' />
+            <Section category='animation' header='Animation' headerVien='Hoạt hình' />
             <Footer />
         </div>
     )

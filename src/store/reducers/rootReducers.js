@@ -3,7 +3,8 @@ const initState = {
     email: '',
     password: '',
     package: '',
-    moviePlay: {}
+    moviePlay: {},
+    userEmail: ''
 }
 
 const rootReducer = (state = initState, action) => {
@@ -32,6 +33,11 @@ const rootReducer = (state = initState, action) => {
             return {
                 ...state,
                 moviePlay: action.payload
+            }
+        case 'SET_USEREMAIL':
+            return {
+                ...state,
+                userEmail: action.payload
             }
         default:
             return state;

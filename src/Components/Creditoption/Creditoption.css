@@ -117,3 +117,12 @@
   color: #828282;
   margin: auto 0px;
 }
+
+@media (max-width: 739px){
+  .creditoption__body{
+    padding: 0 8px;
+  }
+  .registration__body-btn reg__body-form-btn-btn{
+    width: 100%;
+  }
+}

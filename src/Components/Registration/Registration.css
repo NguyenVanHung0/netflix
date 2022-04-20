@@ -74,7 +74,7 @@
 }
 
 .footer__content.register__footer-content {
-  width: 1000px;
+  width: 100%;
 }
 
 .registration__footer-language {
@@ -108,3 +108,13 @@
   background-color: rgb(65, 167, 207);
   color: var(--white-color);
 }
+
+@media (min-width: 768px) and (max-width: 911px){
+  .registration__body{
+    padding: 20px 212px 60px;
+  }
+  .footer__content .register__footer-content{
+    width: 100%;
+  }
+}
+

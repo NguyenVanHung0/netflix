@@ -29,7 +29,6 @@ function Section({ header, headerVien, category, ...props }) {
             ulElement.current.setAttribute('style', `transform: translateX(${-308 * k}px);`)
             setK(k + 1)
         }
-
     }
 
     const handleClickPrev = () => {

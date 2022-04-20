@@ -22,7 +22,7 @@
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-around;
 }
 
 .mylist__item {
@@ -50,7 +50,12 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
+  display: none;
 }
+.mylist__item:hover .mylist-item-content{
+  display: block;
+  animation: up40 ease 0.3s;
+} 
 
 .mylist-item-btn {
   display: flex;
@@ -106,4 +111,22 @@
   color: #f2f2f2;
   font-size: 1.8rem;
   font-weight: bold;
+}
+
+@media (min-width: 740px) and (max-width: 1024px){
+  .mylist{
+    min-height: 1024px;
+  }
+  .mylist__item:hover .mylist-item-content{
+    display: none;
+  } 
+}
+
+@media (max-width: 739px){
+  .mylist__item:hover .mylist-item-content{
+    display: none;
+  } 
+  .mylist{
+    min-height: 844px;
+  }
 }

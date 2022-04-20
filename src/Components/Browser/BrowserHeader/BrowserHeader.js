@@ -40,9 +40,7 @@ function BrowserHeader({ indexList, ...props }) {
     return (
         <div className='header-banner' style={movies.length > 0 ? { background: `url("https://image.tmdb.org/t/p/original//${movies[random].img}") top left / cover no-repeat` } : {}}>
             <div className='header-banner-overlay'>
-
                 <HeaderNavbar indexList={indexList} />
-
                 <div className='banner'>
                     <div className='banner__header'>
                         {movies.length > 0 &&

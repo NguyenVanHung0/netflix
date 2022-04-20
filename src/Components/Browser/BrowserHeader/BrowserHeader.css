@@ -4,6 +4,7 @@
 
 .header-banner-overlay {
   background: rgba(0, 0, 0, 0.5);
+  overflow-y: hidden;
 }
 
 .header-browser {
@@ -73,7 +74,7 @@
   background-color: #14141440;
   padding: 7px 30px 7px 7px;
   font-size: 1.4rem;
-  border: 1px solid#f2f2f2;
+  border: 1px solid #f2f2f2;
   outline: none;
   border-radius: 6px;
   color: #f2f2f2;
@@ -145,7 +146,7 @@
 .banner {
   padding: 70px 55px 10px;
   position: relative;
-  height: 500px;
+  height: 600px;
 }
 
 .banner__header {
@@ -223,4 +224,116 @@
     rgba(14, 14, 14, 0.6),
     #141414
   );
+}
+
+
+@media (min-width: 740px) and (max-width: 1024px){
+  .header__logo-list{
+    display: none;
+  }
+  .discover-list{
+    list-style: none;
+    background-color: black;
+    margin: 2px 0;
+    padding: 20px 0;
+    display: none;
+  }
+  .discover-list li{
+    line-height: 40px;
+    display: block;
+  }
+  .header__logo--list{
+    flex: 1;
+  }
+  .discover{
+    color: #FFF;
+    flex: 1;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  .discover p{
+    margin: 0;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .discover svg{
+    width: 15px;
+    height: 15px;
+  }
+  .active{
+    display: block;
+  }
+  .header__logo-item a{
+    display: block;
+    margin: 0;
+  }
+  .header-banner{
+    height: 600px;
+  }
+  .banner__header{
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 739px){
+  .banner{
+    padding: 70px 16px 10px;
+  }
+  .header__logo-list{
+    display: none;
+  }
+  .discover-list{
+    list-style: none;
+    background-color: black;
+    margin: 2px 0;
+    padding: 20px 0;
+    display: none;
+  }
+  .discover-list li{
+    line-height: 40px;
+    display: block;
+  }
+  .header__logo--list{
+    flex: 1;
+  }
+  .discover{
+    color: #FFF;
+    flex: 1;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  .discover p{
+    margin: 0;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .discover svg{
+    width: 15px;
+    height: 15px;
+  }
+  .active{
+    display: block;
+  }
+  .header__logo-item a{
+    display: block;
+    margin: 0;
+  }
+  .header-banner{
+    height: 600px;
+  }
+  .banner__header{
+    font-size: 5rem;
+  }
+  .header-browser{
+    padding: 0px 16px;
+  }
+  .header__logo-svg svg{
+    width: 120px;
+  }
+  .banner__text{
+    width: 100%;
+  }
+  .header__account-search{
+    display: none;
+  }
 }

@@ -239,7 +239,7 @@
 
 .plus-svg {
   padding: 10px;
-  border: 1px solid#f2f2f2;
+  border: 1px solid #f2f2f2;
   border-radius: 50%;
   color: #f2f2f2;
   width: 36px;
@@ -261,7 +261,7 @@
 
 .detail__box-close-btn svg {
   padding: 10px;
-  border: 1px solid#f2f2f2;
+  border: 1px solid #f2f2f2;
   border-radius: 50%;
   color: #f2f2f2;
   width: 36px;
@@ -321,4 +321,16 @@ hr {
 
 .detail__box-info-colum2 {
   color: #ddd;
+}
+
+@media (min-width: 740px) and (max-width: 1024px){
+  .detail__box{
+    width: 70%;
+  }
+}
+
+@media (max-width: 739px){
+  .detail__box{
+    width: 100%;
+  }
 }

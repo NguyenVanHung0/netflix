@@ -10,6 +10,7 @@ function HeaderNavbar({ indexList, ...props }) {
     const [isSignOut, setIsSignOut] = useState(false)
     const header = useRef()
     const [isActive, setIsActive] = useState(0)
+    const [isAppear, setIsAppear] = useState(false)
     const [linkHeader, setLinkHeader] = useState([])
     const linkEng = ['Home', 'TV Series', 'Movies', 'New & Popular', 'My List']
 
@@ -55,6 +56,10 @@ function HeaderNavbar({ indexList, ...props }) {
         navigate('/')
     }
 
+    const handleClickAppear = () => {
+        setIsAppear(!isAppear);
+    }
+
     return (
         <div className='header-browser' ref={header}>
             <div className='header__logo--list'>
@@ -70,6 +75,23 @@ function HeaderNavbar({ indexList, ...props }) {
                             </g>
                         </svg>
                     </Link>
+                </div>
+                <div className='discover'>
+                    <p onClick={handleClickAppear}>Discover</p>
+                    <svg onClick={handleClickAppear} stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                    </svg>
+                    <ul className={isAppear ? 'discover-list active':'discover-list'}>
+                    {linkHeader.map((link, index) => {
+                        return (
+                            <li key={index} className={isActive == index ? 'header__logo-item header__logo-item-active' : 'header__logo-item'}>
+                                <Link to={'/' + linkEng[index].toLocaleLowerCase().replace(/\s+/g, '')}>
+                                    {link}
+                                </Link>
+                            </li>
+                        )
+                    })}
+                </ul>
                 </div>
                 <ul className='header__logo-list'>
                     {linkHeader.map((link, index) => {

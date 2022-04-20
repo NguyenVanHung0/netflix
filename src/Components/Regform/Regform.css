@@ -75,3 +75,18 @@
   margin: 0;
   width: inherit;
 }
+
+@media (min-width: 740px) and (max-width: 1024px){
+  .regform__body{
+    padding: 20px 164px 200px;
+  }
+}
+
+@media (max-width: 739px){
+  .regform__body{
+    padding: 20px 32px 170px;
+  }
+  .reg__body-form-input{
+    margin-top: 20px;
+  }
+}

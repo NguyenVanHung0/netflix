@@ -32,3 +32,16 @@
 .header-login a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 739px){
+  .header-login{
+    padding: 0 16px;
+  }
+  .header-logo{
+    margin-left: 32px;
+    margin-top: 10px;
+  }
+  .header-login a{
+    line-height: 60px;
+  }
+}

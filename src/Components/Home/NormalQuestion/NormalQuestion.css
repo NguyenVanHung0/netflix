@@ -15,7 +15,7 @@
 
 .home__question-list {
   text-align: left;
-  width: 855px;
+  width: 100%;
   list-style: none;
   transform: translateX(-40px);
 }
@@ -95,4 +95,102 @@
 
 .plus-icon {
   transition: all 0.2s;
+}
+
+@media (min-width: 740px) and (max-width: 1024px){
+  .home__question{
+    padding: 70px 45px;
+  }
+  .home__question-header{
+    font-size: 4rem;
+    margin-bottom: 8px;
+  }
+  .home__question-list{
+    margin: 30px 34px;
+    width: 100%;
+    padding: 0;
+  }
+  .home__question-item{
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .home__question-item-main{
+    height: 100%;
+    padding: 12px 32px;
+  } 
+  .home__question-input{
+    padding: 0 114px;
+  }
+  .home__question-content-text{
+    font-size: 2.3rem;
+    margin: 0;
+  }
+  .home__question-content-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 10px;
+  }
+  .home__question-content-boxinput{
+    width: 500px;
+    height: 60px;
+  }
+  .home__question-content-boxbtn{
+    width: auto;
+    max-width: 130px;
+    height: 40px;
+    padding: 4px 8px;
+    margin-top: 10px;
+  }
+  .home__question-content-boxbtn span{
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+  .home__question-content-boxbtn svg{
+    margin-top: 2px;
+  }
+}
+
+@media (max-width: 739px){
+  .home__question-header{
+    font-size: 2.6rem;
+  }
+  .home__question{
+    padding: 0;
+  }
+  .home__question-item-content{
+    font-size: 1.8rem;
+  }
+  .home__question-list{
+    width: 100%;
+  }
+  .home__question-item{
+    width: 98%;
+  }
+  .home__question{
+    padding: 20px 0;
+  }
+  .home__question-content-input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .home__question-content-boxinput{
+    width: 80%;
+    height: 48px;
+  }
+  .home__question-content-boxbtn{
+    height: 48px;
+    margin-top: 16px;
+    font-size: 1.6rem;
+  }
+  .home__question-item-support{
+    font-size: 1.8rem;
+  }
+  .home__question-list{
+    width: 112%;
+  }
 }

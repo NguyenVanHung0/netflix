@@ -111,3 +111,18 @@
   width: 19px;
   margin-bottom: -8px;
 }
+
+@media (max-width: 739px){
+  .payment__body-box{
+    margin: 0;
+  }
+  .payment__body-content{
+    width: 100%;
+  }
+  .payment__body-content-method-security{
+    width: 100%;
+  }
+  .payment__body-content-method-icon img {
+    margin-bottom: -20px;
+}
+}

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.cc583bfe.css",
-    "main.js": "./static/js/main.58757e1b.js",
+    "main.css": "./static/css/main.b9fcb59f.css",
+    "main.js": "./static/js/main.e615cf34.js",
     "static/js/787.0904c1f0.chunk.js": "./static/js/787.0904c1f0.chunk.js",
     "static/media/android.jpg": "./static/media/android.8f321d90d9c0d0f65078.jpg",
     "static/media/background.jpg": "./static/media/background.7c8b0d8734e2fba2deac.jpg",
@@ -10,12 +10,12 @@
     "static/media/right.svg": "./static/media/right.f1459136a3d413b7a2a1d100362a6d0e.svg",
     "static/media/visa.svg": "./static/media/visa.bd37a379cc4bcbe73f42743fcb42b0d8.svg",
     "index.html": "./index.html",
-    "main.cc583bfe.css.map": "./static/css/main.cc583bfe.css.map",
-    "main.58757e1b.js.map": "./static/js/main.58757e1b.js.map",
+    "main.b9fcb59f.css.map": "./static/css/main.b9fcb59f.css.map",
+    "main.e615cf34.js.map": "./static/js/main.e615cf34.js.map",
     "787.0904c1f0.chunk.js.map": "./static/js/787.0904c1f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc583bfe.css",
-    "static/js/main.58757e1b.js"
+    "static/css/main.b9fcb59f.css",
+    "static/js/main.e615cf34.js"
   ]
 }

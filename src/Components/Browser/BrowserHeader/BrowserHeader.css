@@ -226,10 +226,18 @@
   );
 }
 
+.discover{
+  display: none;
+}
+
 
 @media (min-width: 740px) and (max-width: 1024px){
   .header__logo-list{
     display: none;
+  }
+  .discover{
+    display: block;
+    cursor: pointer;
   }
   .discover-list{
     list-style: none;
@@ -278,6 +286,10 @@
 @media (max-width: 739px){
   .banner{
     padding: 70px 16px 10px;
+  }
+  .discover{
+    display: block;
+    cursor: pointer;
   }
   .header__logo-list{
     display: none;

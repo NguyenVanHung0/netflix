@@ -649,7 +649,48 @@
       "videoUrl": "https://www.youtube.com/embed/4A8X8qd2cRI"
     }
   ],
-  "myList": [],
+  "myList": [
+    {
+      "id": 2,
+      "img": "6qkeXdIEwqOuOWuxsomwnin2RdD.jpg",
+      "nameMovie": "The King's Man",
+      "category": "trending",
+      "description": "As a collection of history's worst tyrants and criminal masterminds gather to plot a war to wipe out millions, one man must race against time to stop them.",
+      "videoUrl": "https://www.youtube.com/embed/yYsba_KuEEU"
+    },
+    {
+      "id": 1,
+      "img": "iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg",
+      "nameMovie": "Spider Man: No Way Home",
+      "category": "trending",
+      "description": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+      "videoUrl": "https://www.youtube.com/embed/Yq4n0upxFVg"
+    },
+    {
+      "id": 3,
+      "img": "k47JEUTQsSMN532HRg6RCzZKBdB.jpg",
+      "nameMovie": "Vikings: Valhalla",
+      "category": "trending",
+      "description": "In this sequel to \"Vikings\", a hundred years have passed and a new generation of legendary heroes arises to forge its own destiny — and make history.",
+      "videoUrl": "https://www.youtube.com/embed/Yi4YnwFT7Gk"
+    },
+    {
+      "id": 4,
+      "img": "usaZV7KB6Man9Rm9TyDAeQf7uVD.jpg",
+      "nameMovie": "Scream",
+      "category": "trending",
+      "description": "Twenty-five years after a streak of brutal murders shocked the quiet town of Woodsboro, a new killer has donned the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town’s deadly past.",
+      "videoUrl": "https://www.youtube.com/embed/beToTslH17s"
+    },
+    {
+      "id": 23,
+      "img": "rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg",
+      "nameMovie": "The Godfather",
+      "category": "rated",
+      "description": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+      "videoUrl": "https://www.youtube.com/embed/LMJIDd9i-Xs"
+    }
+  ],
   "package": [
     {
       "id": 1,
@@ -766,6 +807,30 @@
       "date": "12345",
       "passwordCard": "12345",
       "id": 5
+    },
+    {
+      "language": "vietnam",
+      "email": "hoang1@gmail.com",
+      "passwordAcc": "1234567",
+      "package": "Cao cấp",
+      "firstName": "hung",
+      "lastName": "nguyen",
+      "cardNumber": "12345",
+      "date": "12345",
+      "passwordCard": "12345",
+      "id": 6
+    },
+    {
+      "language": "vietnam",
+      "email": "linh@gmail.com",
+      "passwordAcc": "1234567",
+      "package": "Di động",
+      "firstName": "a",
+      "lastName": "a",
+      "cardNumber": "1",
+      "date": "1",
+      "passwordCard": "1",
+      "id": 7
     }
   ],
   "comment": [
